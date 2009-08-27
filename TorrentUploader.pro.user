@@ -1,0 +1,372 @@
+<!DOCTYPE QtCreatorProject>
+<qtcreator>
+ <data>
+  <variable>RunConfiguration0-Arguments</variable>
+  <valuelist type="QVariantList" />
+ </data>
+ <data>
+  <variable>RunConfiguration0-Executable</variable>
+  <value type="QString" >D:\Qt_workspace\TorrentUploader\bin\uploader.exe</value>
+ </data>
+ <data>
+  <variable>RunConfiguration0-RunConfiguration.name</variable>
+  <value type="QString" >Выполнить D:\Qt_workspace\TorrentUploader\bin\uploader.exe</value>
+ </data>
+ <data>
+  <variable>RunConfiguration0-UseTerminal</variable>
+  <value type="bool" >false</value>
+ </data>
+ <data>
+  <variable>RunConfiguration0-UserEnvironmentChanges</variable>
+  <valuelist type="QVariantList" />
+ </data>
+ <data>
+  <variable>RunConfiguration0-UserName</variable>
+  <value type="QString" ></value>
+ </data>
+ <data>
+  <variable>RunConfiguration0-UserSetName</variable>
+  <value type="bool" >false</value>
+ </data>
+ <data>
+  <variable>RunConfiguration0-WorkingDirectory</variable>
+  <value type="QString" >D:\Qt_workspace\TorrentUploader\bin</value>
+ </data>
+ <data>
+  <variable>RunConfiguration0-type</variable>
+  <value type="QString" >ProjectExplorer.CustomExecutableRunConfiguration</value>
+ </data>
+ <data>
+  <variable>activeRunConfiguration</variable>
+  <value type="int" >0</value>
+ </data>
+ <data>
+  <variable>activebuildconfiguration</variable>
+  <value type="QString" >Release</value>
+ </data>
+ <data>
+  <variable>buildConfiguration-Debug</variable>
+  <valuemap type="QVariantMap" >
+   <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString" >Debug</value>
+   <value key="QtVersionId" type="int" >0</value>
+   <value key="addQDumper" type="" ></value>
+   <value key="buildDirectory" type="QString" >D:\Qt_workspace\TorrentUploader</value>
+  </valuemap>
+ </data>
+ <data>
+  <variable>buildConfiguration-Release</variable>
+  <valuemap type="QVariantMap" >
+   <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString" >Release</value>
+   <value key="QtVersionId" type="int" >0</value>
+   <value key="addQDumper" type="" ></value>
+   <value key="buildDirectory" type="QString" >D:\Qt_workspace\TorrentUploader</value>
+  </valuemap>
+ </data>
+ <data>
+  <variable>buildconfiguration-Debug-buildstep0</variable>
+  <valuemap type="QVariantMap" >
+   <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString" >Debug</value>
+   <valuelist key="abstractProcess.Environment" type="QVariantList" >
+    <value type="QString" >ALKY=C:\Program Files\Alky for Applications\Libraries\</value>
+    <value type="QString" >ALLUSERSPROFILE=C:\Documents and Settings\All Users</value>
+    <value type="QString" >APPDATA=C:\Documents and Settings\XpycT\Application Data</value>
+    <value type="QString" >CLIENTNAME=Console</value>
+    <value type="QString" >COMMANDER_DRIVE=C:</value>
+    <value type="QString" >COMMANDER_INI=C:\Program Files\Total Commander\wincmd.ini</value>
+    <value type="QString" >COMMANDER_PATH=C:\Program Files\Total Commander</value>
+    <value type="QString" >COMMONPROGRAMFILES=C:\Program Files\Common Files</value>
+    <value type="QString" >COMPUTERNAME=WIN7</value>
+    <value type="QString" >COMSPEC=C:\WINDOWS\system32\cmd.exe</value>
+    <value type="QString" >FP_NO_HOST_CHECK=NO</value>
+    <value type="QString" >HOMEDRIVE=C:</value>
+    <value type="QString" >HOMEPATH=\Documents and Settings\XpycT</value>
+    <value type="QString" >LOGONSERVER=\\WIN7</value>
+    <value type="QString" >NEWENVIRONMENT1=C:\Program Files\ATI Technologies\ATI.ACE\</value>
+    <value type="QString" >NUMBER_OF_PROCESSORS=1</value>
+    <value type="QString" >OS=Windows_NT</value>
+    <value type="QString" >PATH=C:\Develop\Qt\2009.03.1\mingw\bin;C:\Develop\Qt\2009.03.1\qt\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\Program Files\Alky for Applications\Libraries\;C:\Develop\Qt\2009.03.1\qt\bin</value>
+    <value type="QString" >PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH</value>
+    <value type="QString" >PROCESSOR_ARCHITECTURE=x86</value>
+    <value type="QString" >PROCESSOR_IDENTIFIER=x86 Family 15 Model 1 Stepping 3, GenuineIntel</value>
+    <value type="QString" >PROCESSOR_LEVEL=15</value>
+    <value type="QString" >PROCESSOR_REVISION=0103</value>
+    <value type="QString" >PROGRAMFILES=C:\Program Files</value>
+    <value type="QString" >QTDIR=C:/Develop/Qt/2009.03.1/qt</value>
+    <value type="QString" >SESSIONNAME=Console</value>
+    <value type="QString" >SYSTEMDRIVE=C:</value>
+    <value type="QString" >SYSTEMROOT=C:\WINDOWS</value>
+    <value type="QString" >TEMP=C:\DOCUME~1\XpycT\LOCALS~1\Temp</value>
+    <value type="QString" >TMP=C:\DOCUME~1\XpycT\LOCALS~1\Temp</value>
+    <value type="QString" >USERDOMAIN=WIN7</value>
+    <value type="QString" >USERNAME=XpycT</value>
+    <value type="QString" >USERPROFILE=C:\Documents and Settings\XpycT</value>
+    <value type="QString" >WINDIR=C:\WINDOWS</value>
+   </valuelist>
+   <valuelist key="abstractProcess.arguments" type="QVariantList" >
+    <value type="QString" >D:/Qt_workspace/TorrentUploader/TorrentUploader.pro</value>
+    <value type="QString" >-spec</value>
+    <value type="QString" >win32-g++</value>
+    <value type="QString" >-r</value>
+   </valuelist>
+   <value key="abstractProcess.command" type="QString" >C:/Develop/Qt/2009.03.1/qt/bin/qmake.exe</value>
+   <value key="abstractProcess.enabled" type="bool" >true</value>
+   <value key="abstractProcess.workingDirectory" type="QString" >D:/Qt_workspace/TorrentUploader</value>
+   <value key="buildConfiguration" type="int" >2</value>
+  </valuemap>
+ </data>
+ <data>
+  <variable>buildconfiguration-Debug-buildstep1</variable>
+  <valuemap type="QVariantMap" >
+   <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString" >Debug</value>
+   <valuelist key="abstractProcess.Environment" type="QVariantList" >
+    <value type="QString" >ALKY=C:\Program Files\Alky for Applications\Libraries\</value>
+    <value type="QString" >ALLUSERSPROFILE=C:\Documents and Settings\All Users</value>
+    <value type="QString" >APPDATA=C:\Documents and Settings\XpycT\Application Data</value>
+    <value type="QString" >CLIENTNAME=Console</value>
+    <value type="QString" >COMMANDER_DRIVE=C:</value>
+    <value type="QString" >COMMANDER_INI=C:\Program Files\Total Commander\wincmd.ini</value>
+    <value type="QString" >COMMANDER_PATH=C:\Program Files\Total Commander</value>
+    <value type="QString" >COMMONPROGRAMFILES=C:\Program Files\Common Files</value>
+    <value type="QString" >COMPUTERNAME=WIN7</value>
+    <value type="QString" >COMSPEC=C:\WINDOWS\system32\cmd.exe</value>
+    <value type="QString" >FP_NO_HOST_CHECK=NO</value>
+    <value type="QString" >HOMEDRIVE=C:</value>
+    <value type="QString" >HOMEPATH=\Documents and Settings\XpycT</value>
+    <value type="QString" >LOGONSERVER=\\WIN7</value>
+    <value type="QString" >NEWENVIRONMENT1=C:\Program Files\ATI Technologies\ATI.ACE\</value>
+    <value type="QString" >NUMBER_OF_PROCESSORS=1</value>
+    <value type="QString" >OS=Windows_NT</value>
+    <value type="QString" >PATH=C:\Develop\Qt\2009.03.1\mingw\bin;C:\Develop\Qt\2009.03.1\qt\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\Program Files\Alky for Applications\Libraries\;C:\Develop\Qt\2009.03.1\qt\bin</value>
+    <value type="QString" >PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH</value>
+    <value type="QString" >PROCESSOR_ARCHITECTURE=x86</value>
+    <value type="QString" >PROCESSOR_IDENTIFIER=x86 Family 15 Model 1 Stepping 3, GenuineIntel</value>
+    <value type="QString" >PROCESSOR_LEVEL=15</value>
+    <value type="QString" >PROCESSOR_REVISION=0103</value>
+    <value type="QString" >PROGRAMFILES=C:\Program Files</value>
+    <value type="QString" >QTDIR=C:/Develop/Qt/2009.03.1/qt</value>
+    <value type="QString" >SESSIONNAME=Console</value>
+    <value type="QString" >SYSTEMDRIVE=C:</value>
+    <value type="QString" >SYSTEMROOT=C:\WINDOWS</value>
+    <value type="QString" >TEMP=C:\DOCUME~1\XpycT\LOCALS~1\Temp</value>
+    <value type="QString" >TMP=C:\DOCUME~1\XpycT\LOCALS~1\Temp</value>
+    <value type="QString" >USERDOMAIN=WIN7</value>
+    <value type="QString" >USERNAME=XpycT</value>
+    <value type="QString" >USERPROFILE=C:\Documents and Settings\XpycT</value>
+    <value type="QString" >WINDIR=C:\WINDOWS</value>
+   </valuelist>
+   <valuelist key="abstractProcess.arguments" type="QVariantList" >
+    <value type="QString" >-w</value>
+   </valuelist>
+   <value key="abstractProcess.command" type="QString" >C:/Develop/Qt/2009.03.1/mingw/bin/mingw32-make.exe</value>
+   <value key="abstractProcess.enabled" type="bool" >true</value>
+   <value key="abstractProcess.workingDirectory" type="QString" >D:/Qt_workspace/TorrentUploader</value>
+  </valuemap>
+ </data>
+ <data>
+  <variable>buildconfiguration-Debug-cleanstep0</variable>
+  <valuemap type="QVariantMap" >
+   <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString" >Debug</value>
+  </valuemap>
+ </data>
+ <data>
+  <variable>buildconfiguration-Release-buildstep0</variable>
+  <valuemap type="QVariantMap" >
+   <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString" >Release</value>
+   <valuelist key="abstractProcess.Environment" type="QVariantList" >
+    <value type="QString" >ALKY=C:\Program Files\Alky for Applications\Libraries\</value>
+    <value type="QString" >ALLUSERSPROFILE=C:\Documents and Settings\All Users</value>
+    <value type="QString" >APPDATA=C:\Documents and Settings\XpycT\Application Data</value>
+    <value type="QString" >CLIENTNAME=Console</value>
+    <value type="QString" >COMMANDER_DRIVE=C:</value>
+    <value type="QString" >COMMANDER_INI=C:\Program Files\Total Commander\wincmd.ini</value>
+    <value type="QString" >COMMANDER_PATH=C:\Program Files\Total Commander</value>
+    <value type="QString" >COMMONPROGRAMFILES=C:\Program Files\Common Files</value>
+    <value type="QString" >COMPUTERNAME=WIN7</value>
+    <value type="QString" >COMSPEC=C:\WINDOWS\system32\cmd.exe</value>
+    <value type="QString" >FP_NO_HOST_CHECK=NO</value>
+    <value type="QString" >HOME=C:\Documents and Settings\XpycT</value>
+    <value type="QString" >HOMEDRIVE=C:</value>
+    <value type="QString" >HOMEPATH=\Documents and Settings\XpycT</value>
+    <value type="QString" >LOGONSERVER=\\WIN7</value>
+    <value type="QString" >NEWENVIRONMENT1=C:\Program Files\ATI Technologies\ATI.ACE\</value>
+    <value type="QString" >NUMBER_OF_PROCESSORS=1</value>
+    <value type="QString" >OS=Windows_NT</value>
+    <value type="QString" >PATH=C:\Develop\Qt\2009.03.1\mingw\bin;C:\Develop\Qt\2009.03.1\qt\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\Program Files\Alky for Applications\Libraries\;C:\Develop\Qt\2009.03.1\qt\bin;C:\Program Files\TortoiseSVN\bin;C:\Program Files\TortoiseGit\bin;;;</value>
+    <value type="QString" >PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH</value>
+    <value type="QString" >PROCESSOR_ARCHITECTURE=x86</value>
+    <value type="QString" >PROCESSOR_IDENTIFIER=x86 Family 15 Model 1 Stepping 3, GenuineIntel</value>
+    <value type="QString" >PROCESSOR_LEVEL=15</value>
+    <value type="QString" >PROCESSOR_REVISION=0103</value>
+    <value type="QString" >PROGRAMFILES=C:\Program Files</value>
+    <value type="QString" >QTDIR=C:/Develop/Qt/2009.03.1/qt</value>
+    <value type="QString" >SESSIONNAME=Console</value>
+    <value type="QString" >SYSTEMDRIVE=C:</value>
+    <value type="QString" >SYSTEMROOT=C:\WINDOWS</value>
+    <value type="QString" >TEMP=C:\DOCUME~1\XpycT\LOCALS~1\Temp</value>
+    <value type="QString" >TMP=C:\DOCUME~1\XpycT\LOCALS~1\Temp</value>
+    <value type="QString" >USERDOMAIN=WIN7</value>
+    <value type="QString" >USERNAME=XpycT</value>
+    <value type="QString" >USERPROFILE=C:\Documents and Settings\XpycT</value>
+    <value type="QString" >WINDIR=C:\WINDOWS</value>
+   </valuelist>
+   <valuelist key="abstractProcess.arguments" type="QVariantList" >
+    <value type="QString" >D:/Qt_workspace/TorrentUploader/TorrentUploader.pro</value>
+    <value type="QString" >-spec</value>
+    <value type="QString" >win32-g++</value>
+    <value type="QString" >-r</value>
+    <value type="QString" >CONFIG+=release</value>
+   </valuelist>
+   <value key="abstractProcess.command" type="QString" >C:/Develop/Qt/2009.03.1/qt/bin/qmake.exe</value>
+   <value key="abstractProcess.enabled" type="bool" >true</value>
+   <value key="abstractProcess.workingDirectory" type="QString" >D:/Qt_workspace/TorrentUploader</value>
+   <value key="buildConfiguration" type="int" >0</value>
+  </valuemap>
+ </data>
+ <data>
+  <variable>buildconfiguration-Release-buildstep1</variable>
+  <valuemap type="QVariantMap" >
+   <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString" >Release</value>
+   <valuelist key="abstractProcess.Environment" type="QVariantList" >
+    <value type="QString" >ALKY=C:\Program Files\Alky for Applications\Libraries\</value>
+    <value type="QString" >ALLUSERSPROFILE=C:\Documents and Settings\All Users</value>
+    <value type="QString" >APPDATA=C:\Documents and Settings\XpycT\Application Data</value>
+    <value type="QString" >CLIENTNAME=Console</value>
+    <value type="QString" >COMMANDER_DRIVE=C:</value>
+    <value type="QString" >COMMANDER_INI=C:\Program Files\Total Commander\wincmd.ini</value>
+    <value type="QString" >COMMANDER_PATH=C:\Program Files\Total Commander</value>
+    <value type="QString" >COMMONPROGRAMFILES=C:\Program Files\Common Files</value>
+    <value type="QString" >COMPUTERNAME=WIN7</value>
+    <value type="QString" >COMSPEC=C:\WINDOWS\system32\cmd.exe</value>
+    <value type="QString" >FP_NO_HOST_CHECK=NO</value>
+    <value type="QString" >HOME=C:\Documents and Settings\XpycT</value>
+    <value type="QString" >HOMEDRIVE=C:</value>
+    <value type="QString" >HOMEPATH=\Documents and Settings\XpycT</value>
+    <value type="QString" >LOGONSERVER=\\WIN7</value>
+    <value type="QString" >NEWENVIRONMENT1=C:\Program Files\ATI Technologies\ATI.ACE\</value>
+    <value type="QString" >NUMBER_OF_PROCESSORS=1</value>
+    <value type="QString" >OS=Windows_NT</value>
+    <value type="QString" >PATH=C:\Develop\Qt\2009.03.1\mingw\bin;C:\Develop\Qt\2009.03.1\qt\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\Program Files\Alky for Applications\Libraries\;C:\Develop\Qt\2009.03.1\qt\bin;C:\Program Files\TortoiseSVN\bin;C:\Program Files\TortoiseGit\bin;;;</value>
+    <value type="QString" >PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH</value>
+    <value type="QString" >PROCESSOR_ARCHITECTURE=x86</value>
+    <value type="QString" >PROCESSOR_IDENTIFIER=x86 Family 15 Model 1 Stepping 3, GenuineIntel</value>
+    <value type="QString" >PROCESSOR_LEVEL=15</value>
+    <value type="QString" >PROCESSOR_REVISION=0103</value>
+    <value type="QString" >PROGRAMFILES=C:\Program Files</value>
+    <value type="QString" >QTDIR=C:/Develop/Qt/2009.03.1/qt</value>
+    <value type="QString" >SESSIONNAME=Console</value>
+    <value type="QString" >SYSTEMDRIVE=C:</value>
+    <value type="QString" >SYSTEMROOT=C:\WINDOWS</value>
+    <value type="QString" >TEMP=C:\DOCUME~1\XpycT\LOCALS~1\Temp</value>
+    <value type="QString" >TMP=C:\DOCUME~1\XpycT\LOCALS~1\Temp</value>
+    <value type="QString" >USERDOMAIN=WIN7</value>
+    <value type="QString" >USERNAME=XpycT</value>
+    <value type="QString" >USERPROFILE=C:\Documents and Settings\XpycT</value>
+    <value type="QString" >WINDIR=C:\WINDOWS</value>
+   </valuelist>
+   <valuelist key="abstractProcess.arguments" type="QVariantList" >
+    <value type="QString" >-w</value>
+   </valuelist>
+   <value key="abstractProcess.command" type="QString" >C:/Develop/Qt/2009.03.1/mingw/bin/mingw32-make.exe</value>
+   <value key="abstractProcess.enabled" type="bool" >true</value>
+   <value key="abstractProcess.workingDirectory" type="QString" >D:/Qt_workspace/TorrentUploader</value>
+  </valuemap>
+ </data>
+ <data>
+  <variable>buildconfiguration-Release-cleanstep0</variable>
+  <valuemap type="QVariantMap" >
+   <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString" >Release</value>
+   <valuelist key="abstractProcess.Environment" type="QVariantList" >
+    <value type="QString" >ALKY=C:\Program Files\Alky for Applications\Libraries\</value>
+    <value type="QString" >ALLUSERSPROFILE=C:\Documents and Settings\All Users</value>
+    <value type="QString" >APPDATA=C:\Documents and Settings\XpycT\Application Data</value>
+    <value type="QString" >CLIENTNAME=Console</value>
+    <value type="QString" >COMMANDER_DRIVE=C:</value>
+    <value type="QString" >COMMANDER_INI=C:\Program Files\Total Commander\wincmd.ini</value>
+    <value type="QString" >COMMANDER_PATH=C:\Program Files\Total Commander</value>
+    <value type="QString" >COMMONPROGRAMFILES=C:\Program Files\Common Files</value>
+    <value type="QString" >COMPUTERNAME=WIN7</value>
+    <value type="QString" >COMSPEC=C:\WINDOWS\system32\cmd.exe</value>
+    <value type="QString" >FP_NO_HOST_CHECK=NO</value>
+    <value type="QString" >HOME=C:\Documents and Settings\XpycT</value>
+    <value type="QString" >HOMEDRIVE=C:</value>
+    <value type="QString" >HOMEPATH=\Documents and Settings\XpycT</value>
+    <value type="QString" >LOGONSERVER=\\WIN7</value>
+    <value type="QString" >NEWENVIRONMENT1=C:\Program Files\ATI Technologies\ATI.ACE\</value>
+    <value type="QString" >NUMBER_OF_PROCESSORS=1</value>
+    <value type="QString" >OS=Windows_NT</value>
+    <value type="QString" >PATH=C:\Develop\Qt\2009.03.1\mingw\bin;C:\Develop\Qt\2009.03.1\qt\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\Program Files\Alky for Applications\Libraries\;C:\Develop\Qt\2009.03.1\qt\bin;C:\Program Files\TortoiseSVN\bin;C:\Program Files\TortoiseGit\bin;;;</value>
+    <value type="QString" >PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH</value>
+    <value type="QString" >PROCESSOR_ARCHITECTURE=x86</value>
+    <value type="QString" >PROCESSOR_IDENTIFIER=x86 Family 15 Model 1 Stepping 3, GenuineIntel</value>
+    <value type="QString" >PROCESSOR_LEVEL=15</value>
+    <value type="QString" >PROCESSOR_REVISION=0103</value>
+    <value type="QString" >PROGRAMFILES=C:\Program Files</value>
+    <value type="QString" >QTDIR=C:/Develop/Qt/2009.03.1/qt</value>
+    <value type="QString" >SESSIONNAME=Console</value>
+    <value type="QString" >SYSTEMDRIVE=C:</value>
+    <value type="QString" >SYSTEMROOT=C:\WINDOWS</value>
+    <value type="QString" >TEMP=C:\DOCUME~1\XpycT\LOCALS~1\Temp</value>
+    <value type="QString" >TMP=C:\DOCUME~1\XpycT\LOCALS~1\Temp</value>
+    <value type="QString" >USERDOMAIN=WIN7</value>
+    <value type="QString" >USERNAME=XpycT</value>
+    <value type="QString" >USERPROFILE=C:\Documents and Settings\XpycT</value>
+    <value type="QString" >WINDIR=C:\WINDOWS</value>
+   </valuelist>
+   <valuelist key="abstractProcess.arguments" type="QVariantList" >
+    <value type="QString" >clean</value>
+    <value type="QString" >-w</value>
+   </valuelist>
+   <value key="abstractProcess.command" type="QString" >C:/Develop/Qt/2009.03.1/mingw/bin/mingw32-make.exe</value>
+   <value key="abstractProcess.enabled" type="bool" >true</value>
+   <value key="abstractProcess.workingDirectory" type="QString" >D:/Qt_workspace/TorrentUploader</value>
+  </valuemap>
+ </data>
+ <data>
+  <variable>buildconfigurations</variable>
+  <valuelist type="QVariantList" >
+   <value type="QString" >Debug</value>
+   <value type="QString" >Release</value>
+  </valuelist>
+ </data>
+ <data>
+  <variable>buildstep0</variable>
+  <valuemap type="QVariantMap" >
+   <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString" ></value>
+   <value key="mkspec" type="QString" ></value>
+  </valuemap>
+ </data>
+ <data>
+  <variable>buildstep1</variable>
+  <valuemap type="QVariantMap" >
+   <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString" ></value>
+  </valuemap>
+ </data>
+ <data>
+  <variable>buildsteps</variable>
+  <valuelist type="QVariantList" >
+   <value type="QString" >trolltech.qt4projectmanager.qmake</value>
+   <value type="QString" >trolltech.qt4projectmanager.make</value>
+  </valuelist>
+ </data>
+ <data>
+  <variable>cleanstep0</variable>
+  <valuemap type="QVariantMap" >
+   <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString" ></value>
+   <value key="clean" type="bool" >true</value>
+  </valuemap>
+ </data>
+ <data>
+  <variable>cleansteps</variable>
+  <valuelist type="QVariantList" >
+   <value type="QString" >trolltech.qt4projectmanager.make</value>
+  </valuelist>
+ </data>
+ <data>
+  <variable>defaultFileEncoding</variable>
+  <value type="QByteArray" >System</value>
+ </data>
+ <data>
+  <variable>project</variable>
+  <valuemap type="QVariantMap" />
+ </data>
+</qtcreator>
