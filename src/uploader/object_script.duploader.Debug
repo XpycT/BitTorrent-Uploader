@@ -1,0 +1,12 @@
+INPUT(
+./..\..\build\uploader\debug\obj\qtsingleapplication.o
+./..\..\build\uploader\debug\obj\qtlocalpeer.o
+./..\..\build\uploader\debug\obj\main.o
+./..\..\build\uploader\debug\obj\welcomedialog.o
+./..\..\build\uploader\debug\obj\settingsdialog.o
+./..\..\build\uploader\debug\obj\moc_qtsingleapplication.o
+./..\..\build\uploader\debug\obj\moc_qtlocalpeer.o
+./..\..\build\uploader\debug\obj\moc_welcomedialog.o
+./..\..\build\uploader\debug\obj\moc_settingsdialog.o
+./..\..\build\uploader\debug\obj\qrc_uploader.o
+);
