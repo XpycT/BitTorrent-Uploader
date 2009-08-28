@@ -1,0 +1,36 @@
+<RCC>
+    <qresource prefix="/" >
+        <file>images/image_add.png</file>
+        <file>images/image_delete.png</file>
+        <file>images/undo.png</file>
+        <file>images/arrow-down.png</file>
+        <file>images/arrow-up.png</file>
+        <file>images/dialog-ok.png</file>
+        <file>images/dialog-cancel.png</file>
+        <file>images/application-x-desktop.png</file>
+        <file>images/network_disconnect.png</file>
+        <file>images/load.gif</file>
+        <file>images/network_connect.png</file>
+        <file>images/profile.png</file>
+        <file>images/BBCode/comment.png</file>
+        <file>images/BBCode/comment_add.png</file>
+        <file>images/BBCode/email_add.png</file>
+        <file>images/BBCode/image_add.png</file>
+        <file>images/BBCode/link_add.png</file>
+        <file>images/BBCode/page_white_code.png</file>
+        <file>images/BBCode/page_white_key.png</file>
+        <file>images/BBCode/page_white_php.png</file>
+        <file>images/BBCode/text_align_center.png</file>
+        <file>images/BBCode/text_align_justify.png</file>
+        <file>images/BBCode/text_align_left.png</file>
+        <file>images/BBCode/text_align_right.png</file>
+        <file>images/BBCode/text_bold.png</file>
+        <file>images/BBCode/text_horizontalrule.png</file>
+        <file>images/BBCode/text_italic.png</file>
+        <file>images/BBCode/text_list_bullets.png</file>
+        <file>images/BBCode/text_strikethrough.png</file>
+        <file>images/BBCode/text_underline.png</file>
+        <file>i18n/i18n_ru.qm</file>
+        <file>i18n/qt_ru.qm</file>
+    </qresource>
+</RCC>

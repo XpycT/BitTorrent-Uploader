@@ -1,0 +1,1 @@
+lupdate TorrentUploader.pro
