@@ -155,12 +155,12 @@
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="../../src/uploader/dialogs/mainwindow.cpp" line="36"/>
+        <location filename="../../src/uploader/dialogs/mainwindow.cpp" line="63"/>
         <source>Torrent Uploader</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/uploader/dialogs/mainwindow.cpp" line="37"/>
+        <location filename="../../src/uploader/dialogs/mainwindow.cpp" line="64"/>
         <source>Do you want to quit?</source>
         <translation type="unfinished"></translation>
     </message>

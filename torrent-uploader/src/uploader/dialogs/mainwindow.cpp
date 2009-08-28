@@ -21,7 +21,21 @@ MainWindow::MainWindow()
     connect(action_Preferences,SIGNAL(triggered()),this,SLOT(showPreferences()));
     connect(actionAbout_Torrent_Uploader,SIGNAL(triggered()),this,SLOT(showAbout()));
 }
-
+void MainWindow::on_browseTorrentButton_clicked(){
+    QString lastDir=m_settings->value("LastDir", "").toString();
+    QString fileName=QFileDialog::getOpenFileName(this,tr("Select a .torrent file")
+                                                  ,lastDir,tr("Torrent File (*.torrent)"));
+    if(fileName.isEmpty())
+        return;
+    lineEditTorrentFile->setText(fileName);
+    m_settings->setValue("LastDir", QFileInfo(fileName).absoluteDir().path());
+}
+void MainWindow::on_clearButton_clicked(){
+    lineEditTorrentFile->clear();
+    lineEditTorrentName->clear();
+    comboBoxTorrentCategory->setCurrentIndex(0);
+    editor->clear();
+}
 void MainWindow::showPreferences(){
     SettingsDialog dlg(this);
     dlg.exec();
@@ -45,7 +59,7 @@ void  MainWindow::readSettings(){
     s_use_kp        =m_settings->value("General/useKP",false).toBool();
     s_use_imdb      =m_settings->value("General/useIMDB",false).toBool();
 
-    s_client_path   =m_settings->value("General/TrackerType", "").toString();
+    s_client_path   =m_settings->value("General/TrackerType", "").toString();   
 
     s_tracker_type  =m_settings->value("General/ClientPath", 0).toInt();
 }

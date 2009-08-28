@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading ui file 'mainwindow.ui'
 **
-** Created: Fri 28. Aug 09:05:26 2009
+** Created: Fri 28. Aug 12:59:30 2009
 **      by: Qt User Interface Compiler version 4.5.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling ui file!
@@ -57,7 +57,7 @@ public:
     ImageWidget *screen1;
     ImageWidget *screen2;
     ImageWidget *screen3;
-    BBCodeWidget *plainTextEdit;
+    BBCodeWidget *editor;
     QHBoxLayout *horizontalLayout_2;
     QPushButton *uploadButton;
     QPushButton *clearButton;
@@ -170,10 +170,10 @@ public:
 
         gridLayout->addWidget(screen3, 1, 3, 1, 1);
 
-        plainTextEdit = new BBCodeWidget(centralwidget);
-        plainTextEdit->setObjectName(QString::fromUtf8("plainTextEdit"));
+        editor = new BBCodeWidget(centralwidget);
+        editor->setObjectName(QString::fromUtf8("editor"));
 
-        gridLayout->addWidget(plainTextEdit, 2, 0, 1, 4);
+        gridLayout->addWidget(editor, 2, 0, 1, 4);
 
         horizontalLayout_2 = new QHBoxLayout();
         horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
@@ -198,7 +198,7 @@ public:
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 850, 23));
+        menubar->setGeometry(QRect(0, 0, 850, 21));
         menu_File = new QMenu(menubar);
         menu_File->setObjectName(QString::fromUtf8("menu_File"));
         menu_Tools = new QMenu(menubar);
