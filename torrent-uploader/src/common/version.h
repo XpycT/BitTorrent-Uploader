@@ -1,8 +1,8 @@
 #ifndef VERSION_H_
 #define VERSION_H_
 
-#define UPLOADER_VERSION      "0.0.0.1298 Beta"
-#define UPLOADER_VERSION_RC   0,0,0,1298
+#define UPLOADER_VERSION      "0.0.0.1299 Beta"
+#define UPLOADER_VERSION_RC   0,0,0,1299
 #define UPLOADER_NAME         "BitTorrent Uploader"
 #define UPLOADER_ORGANIZATION "XpycT"
 #define UPLOADER_DOMAIN       "donald.org.ua"
