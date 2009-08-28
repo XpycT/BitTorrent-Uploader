@@ -1,7 +1,7 @@
 include(../3rdparty/qtsingleapplication/src/qtsingleapplication.pri)
 include(../3rdparty/qtcolorcombobox/src/qtcolorcombobox.pri)
 CONFIG += qt
-QT += network
+QT += network webkit
 DESTDIR = ../../bin
 
 DEPENDPATH += \

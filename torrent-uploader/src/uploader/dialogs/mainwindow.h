@@ -16,6 +16,7 @@ private slots:
     void showAbout();
     void on_browseTorrentButton_clicked();
     void on_clearButton_clicked();
+    void on_previewButton_clicked();
 private:
     bool askOnClose();
     void readSettings();

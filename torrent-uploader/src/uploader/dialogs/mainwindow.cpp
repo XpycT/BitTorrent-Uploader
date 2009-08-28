@@ -2,6 +2,7 @@
 #include "mainwindow.h"
 #include "dialogs/welcomedialog.h"
 #include "dialogs/settingsdialog.h"
+#include "dialogs/previewdialog.h"
 
 MainWindow::MainWindow()
 {
@@ -29,6 +30,11 @@ void MainWindow::on_browseTorrentButton_clicked(){
         return;
     lineEditTorrentFile->setText(fileName);
     m_settings->setValue("LastDir", QFileInfo(fileName).absoluteDir().path());
+}
+void MainWindow::on_previewButton_clicked(){
+    QString content= editor->toPlainText();
+    PreviewDialog preview(0,content);
+    preview.exec();
 }
 void MainWindow::on_clearButton_clicked(){
     lineEditTorrentFile->clear();
