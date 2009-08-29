@@ -12,9 +12,9 @@ public:
                   ,QString &category="",QString &content=""
                   ,QString &poster="",QStringList &screens=QStringList());
 private:
-    QString parseTBDevYuna(QString &name=""
-                  ,QString &category="",QString &content=""
-                  ,QString &poster="",QStringList &screens=QStringList()) const;
+    QString parseTBDevYuna(QString &name
+                  ,QString &category,QString &content
+                  ,QString &poster,QStringList &screens) const;
     QString parseTBDevYunaContent(const QString &content) const;
     QWebView *view;
     QSettings *m_settings;
