@@ -8,7 +8,9 @@ class PreviewDialog : public QDialog
 {
     Q_OBJECT
 public:
-    PreviewDialog(QWidget *parent=0,QString &content="");
+    PreviewDialog(QWidget *parent=0,QString &name=""
+                  ,QString &category="",QString &content=""
+                  ,QString &poster="",QStringList &screens=QStringList());
 private:
     QWebView *view;
 };

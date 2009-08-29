@@ -1,0 +1,78 @@
+﻿<style>
+body {
+	font-family: "tahoma", "arial", "helvetica", "sans-serif";
+	font-size: 8pt;
+    background-color: #669900;
+	color: #000000;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+table {
+	border-collapse: collapse;
+	border: none;
+	background-color: #EEEEEE;
+}
+td {
+	font-size: 8pt;
+	border: solid #000000 1px;
+}
+td.heading {
+	font-weight: bold;
+}
+a:link, a:visited {
+	text-decoration: underline;
+	color: #000000;
+}
+a:hover {
+	color: #669900;
+	text-decoration: underline overline;
+}
+a.index {
+	font-weight: bold;
+}
+/* ---------- gallery styles start here ----------------------- */
+.gallery {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.gallery li {
+	margin: 5px;
+	padding: 0;
+	float: left;
+	position: relative;
+	width: 123px;
+	height: 90px;
+}
+.gallery img {
+	background: #fff;
+	border: solid 1px #ccc;
+	padding: 4px;
+}
+.gallery a {
+	text-decoration: none;
+}
+.gallery a:hover img  {
+	border-color: #666;
+}
+
+</style>
+<table width="100%" border="1" cellspacing="0" cellpadding="5"> 
+<tr><td style="line-height:33px; color:#ccc; text-decoration:none; font-size:11px; font-weight:bold; padding:0 0 0 0px; cursor:pointer;background: url(qrc:/preview/top.gif)" colspan="2"><div style="float: left; width: auto;">:: Детали торрента</div></td></tr>
+<tr><td width="75px" class="heading" valign="top" align="right">Название</td><td valign="top" align="left"><a class="index" href="#"><b>%name%</b></a></td></tr> 
+<tr><td width="" class="heading" valign="top" align="right">Категория</td><td valign="top" align="left">%category%</td></tr>
+ 
+<tr><td valign="top" colspan="2"><table width="100%"><tr><td width="165" valign="top"style="border:none;"><table width="160"><tr align="center"><td style="border:none;background:#e2e2e2;"> <b>Обложка</b></td></tr><tr><td style="border:none;"><img  width="250" border='0' src='%poster%' /></td></tr><tr><td style="border:none;background:#e2e2e2;">&nbsp;</td></tr></table></td>
+<td valign="top" style="border:none;">%description%</td></tr></table></td></tr> 
+
+<tr><td width="" class="heading" valign="top" align="right">Скриншоты</td><td valign="top" align="left">
+<UL class="gallery">
+	%screens%
+</UL>
+
+</td></tr> 
+
+<tr><td width="" class="heading" valign="top" align="right">Добавлен</td><td valign="top" align="left">%date%</td></tr>
+<tr><td width="" class="heading" valign="top" align="right">Раздал</td><td valign="top" align="left">%user%</td></tr> 
+<tr><td width="" class="heading" valign="top" align="right">В раздаче</td><td valign="top" align="left">0 раздающих, 0 качающих = 0 пиров</td></tr> 
+</table>

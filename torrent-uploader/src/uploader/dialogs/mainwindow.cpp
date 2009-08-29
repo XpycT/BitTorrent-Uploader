@@ -32,8 +32,20 @@ void MainWindow::on_browseTorrentButton_clicked(){
     m_settings->setValue("LastDir", QFileInfo(fileName).absoluteDir().path());
 }
 void MainWindow::on_previewButton_clicked(){
-    QString content= editor->toPlainText();
-    PreviewDialog preview(0,content);
+    QString name=lineEditTorrentName->text();
+    QString category=comboBoxTorrentCategory->currentText();
+    QString content=editor->toPlainText();
+    QString image_poster=poster->getFileName();
+
+    QStringList screens;
+    if (!screen1->getFileName().isEmpty())
+        screens << screen1->getFileName();
+    if (!screen2->getFileName().isEmpty())
+        screens << screen2->getFileName();
+    if (!screen3->getFileName().isEmpty())
+        screens << screen3->getFileName();
+
+    PreviewDialog preview(0,name,category,content,image_poster,screens);
     preview.exec();
 }
 void MainWindow::on_clearButton_clicked(){

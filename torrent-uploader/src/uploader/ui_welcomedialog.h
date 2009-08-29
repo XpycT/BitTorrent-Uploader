@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading ui file 'welcomedialog.ui'
 **
-** Created: Fri 28. Aug 07:26:21 2009
+** Created: Fri 28. Aug 14:44:57 2009
 **      by: Qt User Interface Compiler version 4.5.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling ui file!
