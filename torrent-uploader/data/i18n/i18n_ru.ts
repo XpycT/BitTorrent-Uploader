@@ -155,12 +155,22 @@
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="../../src/uploader/dialogs/mainwindow.cpp" line="63"/>
+        <location filename="../../src/uploader/dialogs/mainwindow.cpp" line="27"/>
+        <source>Select a .torrent file</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/uploader/dialogs/mainwindow.cpp" line="28"/>
+        <source>Torrent File (*.torrent)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/uploader/dialogs/mainwindow.cpp" line="95"/>
         <source>Torrent Uploader</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/uploader/dialogs/mainwindow.cpp" line="64"/>
+        <location filename="../../src/uploader/dialogs/mainwindow.cpp" line="96"/>
         <source>Do you want to quit?</source>
         <translation type="unfinished"></translation>
     </message>
@@ -277,6 +287,40 @@
     <message>
         <location filename="../../src/uploader/dialogs/mainwindow.ui" line="258"/>
         <source>&amp;About Torrent Uploader</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>PreviewDialog</name>
+    <message>
+        <location filename="../../src/uploader/dialogs/previewdialog.cpp" line="39"/>
+        <source>Close preview</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/uploader/dialogs/previewdialog.cpp" line="95"/>
+        <source>Code:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/uploader/dialogs/previewdialog.cpp" line="97"/>
+        <source>PHP-code:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/uploader/dialogs/previewdialog.cpp" line="99"/>
+        <source>Quote:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/uploader/dialogs/previewdialog.cpp" line="101"/>
+        <source>write:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/uploader/dialogs/previewdialog.cpp" line="103"/>
+        <location filename="../../src/uploader/dialogs/previewdialog.cpp" line="105"/>
+        <source>Show/hide</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
