@@ -32,7 +32,10 @@
         <file>images/BBCode/text_underline.png</file>
         <file>i18n/i18n_ru.qm</file>
         <file>i18n/qt_ru.qm</file>
-        <file>preview/preview.html</file>
         <file>preview/top.gif</file>
+        <file>preview/preview_yuna.html</file>
+        <file>preview/jquery.min.js</file>
+        <file>preview/icon_minus.gif</file>
+        <file>preview/icon_plus.gif</file>
     </qresource>
 </RCC>

@@ -175,7 +175,7 @@ void BBCodeWidget::addTag(QAction* a){
     }else if(a == hr){
             insertSingleTag("hr");
     }else if(a == li){
-            insertSingleTag("*");
+            insertSingleTag("li");
     }
 }
 void BBCodeWidget::insertDoubleTag(const QString &tag,QString opt){
