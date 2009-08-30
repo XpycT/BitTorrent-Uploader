@@ -155,23 +155,48 @@
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="../../src/uploader/dialogs/mainwindow.cpp" line="27"/>
+        <location filename="../../src/uploader/dialogs/mainwindow.cpp" line="28"/>
         <source>Select a .torrent file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/uploader/dialogs/mainwindow.cpp" line="28"/>
+        <location filename="../../src/uploader/dialogs/mainwindow.cpp" line="29"/>
         <source>Torrent File (*.torrent)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/uploader/dialogs/mainwindow.cpp" line="95"/>
+        <location filename="../../src/uploader/dialogs/mainwindow.cpp" line="92"/>
+        <source>Connected to tracker &apos;%1&apos;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/uploader/dialogs/mainwindow.cpp" line="101"/>
+        <source>Retrieving data from &apos;%1&apos;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/uploader/dialogs/mainwindow.cpp" line="112"/>
+        <source>Connected successfully.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/uploader/dialogs/mainwindow.cpp" line="123"/>
+        <source>Connected unsuccessfully.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/uploader/dialogs/mainwindow.cpp" line="140"/>
         <source>Torrent Uploader</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/uploader/dialogs/mainwindow.cpp" line="96"/>
+        <location filename="../../src/uploader/dialogs/mainwindow.cpp" line="141"/>
         <source>Do you want to quit?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/uploader/dialogs/mainwindow.cpp" line="157"/>
+        <source>Not connected.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

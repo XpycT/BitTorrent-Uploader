@@ -11,6 +11,7 @@ MainWindow::MainWindow()
     setWindowTitle(QString("%1 [%2]").arg(QApplication::applicationName())
                    .arg(QApplication::applicationVersion()));
 
+    createStatusBar();
     readSettings();
 
     if(!s_hide_welcome){
@@ -18,7 +19,7 @@ MainWindow::MainWindow()
         if(welcome.exec()==QDialog::Accepted)
             readSettings();
     }
-
+    //setConnectMode(Connecting_imdb);
     connect(action_Preferences,SIGNAL(triggered()),this,SLOT(showPreferences()));
     connect(actionAbout_Torrent_Uploader,SIGNAL(triggered()),this,SLOT(showAbout()));
 }
@@ -81,7 +82,51 @@ void  MainWindow::readSettings(){
 
     s_tracker_type  =m_settings->value("General/ClientPath", 0).toInt();
 }
+void MainWindow::setConnectMode(ConnectMode Mode){
+    currentConnectMode = Mode;
+    switch(currentConnectMode){
+        case Connecting:{
+                connectMovie->movie()->setPaused(false);
+                connectMovie->setVisible(true);
+                connectLabel->setVisible(false);
+                statusLabel->setText(tr("Connected to tracker '%1'")
+                                     .arg(QApplication::organizationDomain()));
+            }
+            break;
+        case Connecting_kp:
+        case Connecting_imdb:{
+                connectMovie->movie()->setPaused(false);
+                connectMovie->setVisible(true);
+                connectLabel->setVisible(false);
+                statusLabel->setText(tr("Retrieving data from '%1'")
+                                     .arg(currentConnectMode==Connecting_kp?
+                                          "KINOPOISK.RU"
+                                          :"IMDB.COM"));
+            }
+            break;
+        case Connected:{
+                connectMovie->movie()->setPaused(true);
+                connectMovie->setVisible(false);
+                connectLabel->setVisible(true);
+                connectLabel->setPixmap(QPixmap(":/images/network_connect.png"));
+                statusLabel->setText(tr("Connected successfully."));
 
+                if(!centralwidget->isEnabled())
+                        centralwidget->setEnabled(true);
+            }
+            break;
+        case Disconnected:{
+                connectMovie->movie()->setPaused(true);
+                connectMovie->setVisible(false);
+                connectLabel->setVisible(true);
+                connectLabel->setPixmap(QPixmap(":/images/network_disconnect.png"));
+                statusLabel->setText(tr("Connected unsuccessfully."));
+
+                centralwidget->setEnabled(false);
+            }
+            break;
+    }
+}
 void MainWindow::closeEvent(QCloseEvent *e)
 {
     if (askOnClose())
@@ -99,4 +144,24 @@ bool MainWindow::askOnClose()
     if (ret == QMessageBox::Cancel)
         return false;
     return true;
+}
+void MainWindow::createStatusBar()
+{
+  connectLabel = new QLabel;
+  connectLabel->setVisible(false);
+
+  connectMovie = new QLabel;
+  connectMovie->setMovie(new QMovie(":/images/load.gif", QByteArray()));
+  connectMovie->setVisible(false);
+
+  statusLabel = new QLabel(tr("Not connected."));
+  statusLabel->setWordWrap(true);
+
+  statusBar = new QStatusBar;
+  statusBar->addWidget(connectLabel);
+  statusBar->addWidget(connectMovie);
+  statusBar->addWidget(statusLabel, 1);
+
+  statusBar->setStyleSheet("QStatusBar::item { border-width: 0; }");
+  setStatusBar(statusBar);
 }
