@@ -30,10 +30,29 @@ MainWindow::MainWindow()
 
     connect(tracker,SIGNAL(categoryDone()),this,SLOT(getCategory()));
     connect(tracker,SIGNAL(blockInterface(bool&)),this,SLOT(blockInterface(bool&)));
+    connect(tracker,SIGNAL(uploadDone(QString&)),this,SLOT(startDownload(QString&)));
+    connect(tracker,SIGNAL(errorMessage(QString&)),this,SLOT(showError(QString&)));
 
     connect(action_Preferences,SIGNAL(triggered()),this,SLOT(showPreferences()));
     connect(actionAbout_Torrent_Uploader,SIGNAL(triggered()),this,SLOT(showAbout()));
     connect(action_Reconnect,SIGNAL(triggered()),this,SLOT(reconnect()));
+}
+void MainWindow::showError(QString &message){
+    uploadButton->setEnabled(true);
+    setConnectMode(Connected);
+    QMessageBox::warning(this,tr("Error"),
+                         message);    
+}
+void MainWindow::startDownload(QString &fileName){
+    uploadButton->setEnabled(true);
+    setConnectMode(Connected);
+     if(QFile::exists(s_client_path)){
+         QStringList arguments;
+         arguments << fileName;
+         QProcess  *btclient = new QProcess;
+         btclient->start(s_client_path,arguments);
+    }
+
 }
 void MainWindow::on_browseTorrentButton_clicked(){
     QString lastDir=m_settings->value("LastDir", "").toString();
@@ -58,6 +77,7 @@ void MainWindow::on_previewButton_clicked(){
     if (!screen3->getFileName().isEmpty())
         screens << screen3->getFileName();
 
+
     PreviewDialog preview(0,name,category,content,image_poster,screens);
     preview.exec();
 }
@@ -68,25 +88,32 @@ void MainWindow::on_clearButton_clicked(){
     editor->clear();
 }
 void MainWindow::on_uploadButton_clicked(){
+    uploadButton->setEnabled(false);
+    setConnectMode(Uploading);
     QString t_name=lineEditTorrentName->text();
     QString t_file=lineEditTorrentFile->text();
     QString t_descr=editor->toPlainText();
-    QString cat=comboBoxTorrentCategory->currentText();
+    QString cat=comboBoxTorrentCategory->currentText();    
     int t_cat;
 
      QMapIterator<int,QString> i(map);
      while (i.hasNext()) {
          i.next();
          if(i.value()==cat)
-             qDebug() << i.key();
+             t_cat = i.key();
      }
+     QString t_image_poster=poster->getFileName();
+     QStringList t_screens;
+    if (!screen1->getFileName().isEmpty())
+        t_screens << screen1->getFileName();
+    if (!screen2->getFileName().isEmpty())
+        t_screens << screen2->getFileName();
+    if (!screen3->getFileName().isEmpty())
+        t_screens << screen3->getFileName();
 
-    qDebug() << t_name;
-    qDebug() << t_file;
-    qDebug() << t_descr;
-    qDebug() << t_cat;
-
-    tracker->uploadRelease();
+    tracker->uploadRelease(t_file,t_name
+                           ,t_descr,t_cat
+                           ,t_image_poster,t_screens);
 }
 void MainWindow::showPreferences(){
     SettingsDialog dlg(this);
@@ -98,7 +125,8 @@ void MainWindow::showPreferences(){
 
 void MainWindow::showAbout(){
    QMessageBox::about(this,QApplication::applicationName()
-                      ,QString("<h2>%1</h2>").arg(QApplication::applicationName()));
+                      ,QString("<h3>%1 %2</h3>").arg(QApplication::applicationName())
+                      .arg(QApplication::applicationVersion()));
 
 }
 void MainWindow::reconnect(){
@@ -137,9 +165,9 @@ void  MainWindow::readSettings(){
     s_use_kp        =m_settings->value("General/useKP",false).toBool();
     s_use_imdb      =m_settings->value("General/useIMDB",false).toBool();
 
-    s_client_path   =m_settings->value("General/TrackerType", "").toString();   
+    s_client_path   =m_settings->value("General/ClientPath", "").toString();
 
-    s_tracker_type  =m_settings->value("General/ClientPath", 0).toInt();
+    s_tracker_type  =m_settings->value("General/TrackerType", 0).toInt();
 }
 void MainWindow::setConnectMode(ConnectMode Mode){
     currentConnectMode = Mode;
@@ -182,6 +210,14 @@ void MainWindow::setConnectMode(ConnectMode Mode){
                 statusLabel->setText(tr("Connected unsuccessfully."));
 
                 centralwidget->setEnabled(false);
+            }
+            break;
+        case Uploading:{
+                connectMovie->movie()->setPaused(false);
+                connectMovie->setVisible(true);
+                connectLabel->setVisible(false);
+                statusLabel->setText(tr("Uploading to tracker '%1'")
+                                     .arg(QApplication::organizationDomain()));
             }
             break;
     }

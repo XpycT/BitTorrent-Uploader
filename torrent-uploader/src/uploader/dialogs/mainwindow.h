@@ -12,13 +12,15 @@ class MainWindow : public QMainWindow, public Ui::MainWindow
     Q_OBJECT
 public:
     MainWindow();
-    enum ConnectMode {Connecting,Connecting_kp,Connecting_imdb,Connected,Disconnected};
+    enum ConnectMode {Connecting,Connecting_kp,Connecting_imdb,Connected,Disconnected,Uploading};
 private slots:
     void showPreferences();
     void showAbout();
     void reconnect();
     void getCategory();
+    void startDownload(QString &fileName);
     void blockInterface(bool &isBlocked);
+    void showError(QString &message);
     void on_browseTorrentButton_clicked();
     void on_clearButton_clicked();
     void on_previewButton_clicked();

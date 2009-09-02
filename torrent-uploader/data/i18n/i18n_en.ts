@@ -155,47 +155,57 @@
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="../../src/uploader/dialogs/mainwindow.cpp" line="40"/>
+        <location filename="../../src/uploader/dialogs/mainwindow.cpp" line="43"/>
+        <source>Error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/uploader/dialogs/mainwindow.cpp" line="59"/>
         <source>Select a .torrent file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/uploader/dialogs/mainwindow.cpp" line="41"/>
+        <location filename="../../src/uploader/dialogs/mainwindow.cpp" line="60"/>
         <source>Torrent File (*.torrent)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/uploader/dialogs/mainwindow.cpp" line="151"/>
+        <location filename="../../src/uploader/dialogs/mainwindow.cpp" line="179"/>
         <source>Connected to tracker &apos;%1&apos;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/uploader/dialogs/mainwindow.cpp" line="160"/>
+        <location filename="../../src/uploader/dialogs/mainwindow.cpp" line="188"/>
         <source>Retrieving data from &apos;%1&apos;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/uploader/dialogs/mainwindow.cpp" line="171"/>
+        <location filename="../../src/uploader/dialogs/mainwindow.cpp" line="199"/>
         <source>Connected successfully.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/uploader/dialogs/mainwindow.cpp" line="182"/>
+        <location filename="../../src/uploader/dialogs/mainwindow.cpp" line="210"/>
         <source>Connected unsuccessfully.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/uploader/dialogs/mainwindow.cpp" line="199"/>
+        <location filename="../../src/uploader/dialogs/mainwindow.cpp" line="219"/>
+        <source>Uploading to tracker &apos;%1&apos;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/uploader/dialogs/mainwindow.cpp" line="235"/>
         <source>Torrent Uploader</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/uploader/dialogs/mainwindow.cpp" line="200"/>
+        <location filename="../../src/uploader/dialogs/mainwindow.cpp" line="236"/>
         <source>Do you want to quit?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/uploader/dialogs/mainwindow.cpp" line="216"/>
+        <location filename="../../src/uploader/dialogs/mainwindow.cpp" line="252"/>
         <source>Not connected.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -548,6 +558,14 @@
     <message>
         <location filename="../../src/uploader/dialogs/settingsdialog.ui" line="400"/>
         <source>Other</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>TrackerTBDevYuna</name>
+    <message>
+        <location filename="../../src/uploader/trackers/trackertbdevyuna.cpp" line="194"/>
+        <source>File already exists!</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
