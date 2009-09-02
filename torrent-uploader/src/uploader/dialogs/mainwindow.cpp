@@ -3,10 +3,12 @@
 #include "dialogs/welcomedialog.h"
 #include "dialogs/settingsdialog.h"
 #include "dialogs/previewdialog.h"
+#include "trackers/trackertbdevyuna.h"
 
 MainWindow::MainWindow()
 {
     setupUi(this);
+    centralwidget->setEnabled(false);
     m_settings = new QSettings(QApplication::organizationName(), QApplication::applicationName());
     setWindowTitle(QString("%1 [%2]").arg(QApplication::applicationName())
                    .arg(QApplication::applicationVersion()));
@@ -19,9 +21,19 @@ MainWindow::MainWindow()
         if(welcome.exec()==QDialog::Accepted)
             readSettings();
     }
-    //setConnectMode(Connecting_imdb);
+    switch(s_tracker_type){
+        case 0:
+        tracker=new TrackerTBDevYuna;
+    }
+    tracker->checkLogin(s_login,s_password);
+    setConnectMode(Connecting);
+
+    connect(tracker,SIGNAL(categoryDone()),this,SLOT(getCategory()));
+    connect(tracker,SIGNAL(blockInterface(bool&)),this,SLOT(blockInterface(bool&)));
+
     connect(action_Preferences,SIGNAL(triggered()),this,SLOT(showPreferences()));
     connect(actionAbout_Torrent_Uploader,SIGNAL(triggered()),this,SLOT(showAbout()));
+    connect(action_Reconnect,SIGNAL(triggered()),this,SLOT(reconnect()));
 }
 void MainWindow::on_browseTorrentButton_clicked(){
     QString lastDir=m_settings->value("LastDir", "").toString();
@@ -55,17 +67,64 @@ void MainWindow::on_clearButton_clicked(){
     comboBoxTorrentCategory->setCurrentIndex(0);
     editor->clear();
 }
+void MainWindow::on_uploadButton_clicked(){
+    QString t_name=lineEditTorrentName->text();
+    QString t_file=lineEditTorrentFile->text();
+    QString t_descr=editor->toPlainText();
+    QString cat=comboBoxTorrentCategory->currentText();
+    int t_cat;
+
+     QMapIterator<int,QString> i(map);
+     while (i.hasNext()) {
+         i.next();
+         if(i.value()==cat)
+             qDebug() << i.key();
+     }
+
+    qDebug() << t_name;
+    qDebug() << t_file;
+    qDebug() << t_descr;
+    qDebug() << t_cat;
+
+    tracker->uploadRelease();
+}
 void MainWindow::showPreferences(){
     SettingsDialog dlg(this);
-    dlg.exec();
+    if(dlg.exec()){
+        readSettings();
+        tracker->checkLogin(s_login,s_password);
+    }
 }
 
 void MainWindow::showAbout(){
    QMessageBox::about(this,QApplication::applicationName()
-                      ,QString("<h1>%1</h1>").arg(QApplication::applicationName()));
+                      ,QString("<h2>%1</h2>").arg(QApplication::applicationName()));
 
 }
+void MainWindow::reconnect(){
+    setConnectMode(Connecting);
+    readSettings();
+    tracker->checkLogin(s_login,s_password);
+}
+void MainWindow::blockInterface(bool &isBlocked){
+   centralwidget->setEnabled(isBlocked);
+   if(!isBlocked)
+       setConnectMode(Disconnected);
+}
+void MainWindow::getCategory(){
+    comboBoxTorrentCategory->clear();
 
+    //QMap<int,QString> map;
+    map = tracker->returnCategory();
+    qDebug() << map.count();
+
+     QMapIterator<int,QString> i(map);
+     while (i.hasNext()) {
+         i.next();
+         comboBoxTorrentCategory->addItem(i.value());
+     }
+     setConnectMode(Connected);
+}
 void  MainWindow::readSettings(){
     s_login         =m_settings->value("Profile/Login","").toString();
     s_password      =m_settings->value("Profile/Password","").toString();

@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "trackers/trackerrequest.h"
 #include "ui_mainwindow.h"
 
 class QSettings;
@@ -15,9 +16,13 @@ public:
 private slots:
     void showPreferences();
     void showAbout();
+    void reconnect();
+    void getCategory();
+    void blockInterface(bool &isBlocked);
     void on_browseTorrentButton_clicked();
     void on_clearButton_clicked();
     void on_previewButton_clicked();
+    void on_uploadButton_clicked();
 private:
     void setConnectMode(ConnectMode Mode);
     bool askOnClose();
@@ -40,6 +45,8 @@ private:
     QStatusBar *statusBar;
 
     ConnectMode currentConnectMode;
+    TrackerRequest *tracker;
+    QMap<int,QString> map;
 
 protected:    
     void closeEvent(QCloseEvent *e);

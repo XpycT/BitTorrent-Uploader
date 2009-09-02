@@ -1,12 +1,11 @@
 #include <QTextCodec>
-//#include <QTranslator>
 #include <qtsingleapplication.h>
 #include "version.h"
 #include "dialogs/mainwindow.h"
 int main(int argc, char **argv)
 {
-  QTextCodec::setCodecForTr(QTextCodec::codecForName("UTF-8"));
-  QTextCodec::setCodecForCStrings(QTextCodec::codecForName("UTF-8"));
+  QTextCodec::setCodecForTr(QTextCodec::codecForName("WINDOWS-1251"));
+  QTextCodec::setCodecForCStrings(QTextCodec::codecForName("WINDOWS-1251"));
 
     QtSingleApplication instance(argc, argv);
     if (instance.sendMessage("Wake up!"))
