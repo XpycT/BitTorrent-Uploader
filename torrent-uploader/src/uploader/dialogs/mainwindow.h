@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "interfaces.h"
 #include "trackers/trackerrequest.h"
 #include "ui_mainwindow.h"
 
@@ -13,6 +14,8 @@ class MainWindow : public QMainWindow, public Ui::MainWindow
 public:
     MainWindow();
     enum ConnectMode {Connecting,Connecting_kp,Connecting_imdb,Connected,Disconnected,Uploading};
+    void loadPlugins();
+    void addToMenu  (QObject* pobj);
 private slots:
     void showPreferences();
     void showAbout();
@@ -25,6 +28,9 @@ private slots:
     void on_clearButton_clicked();
     void on_previewButton_clicked();
     void on_uploadButton_clicked();
+protected slots:
+    void slotStringOperation();
+    void getMovie(QString &descr);
 private:
     void setConnectMode(ConnectMode Mode);
     bool askOnClose();

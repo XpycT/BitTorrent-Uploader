@@ -18,7 +18,8 @@ HEADERS += version.h \
     dialogs/mainwindow.h \
     dialogs/previewdialog.h \
     trackers/trackertbdevyuna.h \
-    trackers/trackerrequest.h
+    trackers/trackerrequest.h \
+    ../common/interfaces.h
 FORMS += dialogs/welcomedialog.ui \
     dialogs/settingsdialog.ui \
     dialogs/mainwindow.ui

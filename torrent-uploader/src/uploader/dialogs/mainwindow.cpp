@@ -13,6 +13,7 @@ MainWindow::MainWindow()
     setWindowTitle(QString("%1 [%2]").arg(QApplication::applicationName())
                    .arg(QApplication::applicationVersion()));
 
+    loadPlugins();
     createStatusBar();
     readSettings();
 
@@ -259,4 +260,55 @@ void MainWindow::createStatusBar()
 
   statusBar->setStyleSheet("QStatusBar::item { border-width: 0; }");
   setStatusBar(statusBar);
+}
+// ----------------------------------------------------------------------
+void MainWindow::loadPlugins()
+{
+    QDir dir(QApplication::applicationDirPath());
+    if (!dir.cd("plugins")) {
+        QMessageBox::critical(0, "", tr("plugins directory does not exist"));
+        return;
+    }
+
+    foreach (QString strFileName, dir.entryList(QDir::Files)) {
+        QPluginLoader loader(dir.absoluteFilePath(strFileName));
+        connect(loader.instance(),SIGNAL(getDescription(QString&)) ,this,SLOT(getMovie(QString&)));
+        addToMenu(qobject_cast<QObject*>(loader.instance()));
+    }
+}
+
+// ----------------------------------------------------------------------
+void MainWindow::addToMenu(QObject* pobj)
+{
+    if (!pobj) {
+        return;
+    }
+
+    PluginInterface* pI = qobject_cast<PluginInterface*>(pobj);
+    if (pI) {
+        QStringList lstOperations = pI->operations();
+        foreach (QString str, lstOperations) {
+            QAction* pact = new QAction(str, pobj);
+            connect(pact, SIGNAL(triggered()),
+                    this, SLOT(slotStringOperation())
+                   );
+            menu_Tools->addAction(pact);
+
+        }
+    }
+}
+
+// ----------------------------------------------------------------------
+void MainWindow::slotStringOperation()
+{
+    QAction* pact = qobject_cast<QAction*>(sender());
+
+    PluginInterface* pI = qobject_cast<PluginInterface*>(pact->parent());
+    pI->operation();
+
+}
+// ----------------------------------------------------------------------
+void MainWindow::getMovie(QString &descr)
+{
+   editor->setPlainText(descr);
 }
