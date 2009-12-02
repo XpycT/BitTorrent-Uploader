@@ -7,7 +7,7 @@ class SelectMovieDialog : public QDialog
 {
     Q_OBJECT
 public:
-    SelectMovieDialog(QWidget *parent=0, QString &content="");
+    SelectMovieDialog(QWidget *parent=0,const QString & content="");
     QString movieID;
 private slots:
     void selectMovie();

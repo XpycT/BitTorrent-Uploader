@@ -1,10 +1,10 @@
 /********************************************************************************
-** Form generated from reading ui file 'settingsdialog.ui'
+** Form generated from reading UI file 'settingsdialog.ui'
 **
-** Created: Wed 2. Sep 08:07:50 2009
-**      by: Qt User Interface Compiler version 4.5.2
+** Created: Wed 2. Dec 09:00:36 2009
+**      by: Qt User Interface Compiler version 4.6.0
 **
-** WARNING! All changes made in this file will be lost when recompiling ui file!
+** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
 
 #ifndef UI_SETTINGSDIALOG_H
@@ -383,7 +383,6 @@ public:
         ___qlistwidgetitem1->setText(QApplication::translate("SettingsDialog", "Other", 0, QApplication::UnicodeUTF8));
         menuList->setSortingEnabled(__sortingEnabled);
 
-        Q_UNUSED(SettingsDialog);
     } // retranslateUi
 
 };

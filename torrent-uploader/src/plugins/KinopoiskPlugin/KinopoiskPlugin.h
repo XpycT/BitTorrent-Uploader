@@ -19,7 +19,7 @@ public:
     virtual void     operation ();
     enum Status {Login,Category,Movie};
 signals:
-    virtual void getDescription(QString &descr);
+    /*virtual*/ void getDescription(QString &descr);
 
 private slots:
     void replyFinished(QNetworkReply*);

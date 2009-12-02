@@ -1,7 +1,7 @@
 #include "selectmoviedialog.h"
 #include <QCommandLinkButton>
 #include <QVBoxLayout>
-SelectMovieDialog::SelectMovieDialog(QWidget *parent,QString &content)
+SelectMovieDialog::SelectMovieDialog(QWidget *parent,const QString &content)
         :QDialog(parent)
 {    
     QVBoxLayout *layout=new QVBoxLayout;

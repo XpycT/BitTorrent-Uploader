@@ -8,9 +8,9 @@
 #include <QApplication>
 #include <QRegExp>
 #include <QDebug>
-PreviewDialog::PreviewDialog(QWidget *parent,QString &name
-                             ,QString &category,QString &content
-                             ,QString &poster,QStringList &screens)
+PreviewDialog::PreviewDialog(QWidget *parent,const  QString &name
+                             ,const  QString &category,const  QString &content
+                             ,const  QString &poster,const  QStringList &screens)
         :QDialog(parent)
 {
 
@@ -46,9 +46,9 @@ PreviewDialog::PreviewDialog(QWidget *parent,QString &name
 
 }
 
-QString PreviewDialog::parseTBDevYuna(QString &name
-                             ,QString &category,QString &content
-                             ,QString &poster,QStringList &screens) const
+QString PreviewDialog::parseTBDevYuna(const QString &name
+                             ,const QString &category,const QString &content
+                             ,const QString &poster,const QStringList &screens) const
 {
     QFile file(":/preview/preview_yuna.html");
     if (!file.open(QIODevice::ReadOnly))
