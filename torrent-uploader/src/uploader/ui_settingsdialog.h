@@ -1,8 +1,8 @@
 /********************************************************************************
 ** Form generated from reading UI file 'settingsdialog.ui'
 **
-** Created: Wed 2. Dec 09:00:36 2009
-**      by: Qt User Interface Compiler version 4.6.0
+** Created: Sun 14. Feb 21:30:57 2010
+**      by: Qt User Interface Compiler version 4.6.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -35,6 +35,8 @@ class Ui_SettingsDialog
 {
 public:
     QGridLayout *gridLayout_5;
+    QSpacerItem *horizontalSpacer;
+    QListWidget *menuList;
     QStackedWidget *pageWidget;
     QWidget *pageProfile;
     QGridLayout *gridLayout_4;
@@ -73,11 +75,9 @@ public:
     QPushButton *selectClientButton;
     QSpacerItem *verticalSpacer;
     QFrame *line;
-    QSpacerItem *horizontalSpacer;
     QPushButton *resetButton;
     QPushButton *okButton;
     QPushButton *cancelButton;
-    QListWidget *menuList;
 
     void setupUi(QDialog *SettingsDialog)
     {
@@ -86,13 +86,43 @@ public:
         SettingsDialog->resize(477, 416);
         gridLayout_5 = new QGridLayout(SettingsDialog);
         gridLayout_5->setObjectName(QString::fromUtf8("gridLayout_5"));
+        horizontalSpacer = new QSpacerItem(232, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        gridLayout_5->addItem(horizontalSpacer, 3, 0, 1, 2);
+
+        menuList = new QListWidget(SettingsDialog);
+        QIcon icon;
+        icon.addFile(QString::fromUtf8(":/images/profile.png"), QSize(), QIcon::Normal, QIcon::Off);
+        QListWidgetItem *__qlistwidgetitem = new QListWidgetItem(menuList);
+        __qlistwidgetitem->setIcon(icon);
+        QIcon icon1;
+        icon1.addFile(QString::fromUtf8(":/images/application-x-desktop.png"), QSize(), QIcon::Normal, QIcon::Off);
+        QListWidgetItem *__qlistwidgetitem1 = new QListWidgetItem(menuList);
+        __qlistwidgetitem1->setIcon(icon1);
+        menuList->setObjectName(QString::fromUtf8("menuList"));
+        QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(menuList->sizePolicy().hasHeightForWidth());
+        menuList->setSizePolicy(sizePolicy);
+        menuList->setMinimumSize(QSize(142, 0));
+        menuList->setMaximumSize(QSize(142, 16777215));
+        menuList->setFrameShape(QFrame::StyledPanel);
+        menuList->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        menuList->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        menuList->setEditTriggers(QAbstractItemView::NoEditTriggers);
+        menuList->setProperty("showDropIndicator", QVariant(true));
+        menuList->setIconSize(QSize(16, 16));
+
+        gridLayout_5->addWidget(menuList, 0, 0, 1, 1);
+
         pageWidget = new QStackedWidget(SettingsDialog);
         pageWidget->setObjectName(QString::fromUtf8("pageWidget"));
-        QSizePolicy sizePolicy(QSizePolicy::Minimum, QSizePolicy::Preferred);
-        sizePolicy.setHorizontalStretch(1);
-        sizePolicy.setVerticalStretch(0);
-        sizePolicy.setHeightForWidth(pageWidget->sizePolicy().hasHeightForWidth());
-        pageWidget->setSizePolicy(sizePolicy);
+        QSizePolicy sizePolicy1(QSizePolicy::Minimum, QSizePolicy::Preferred);
+        sizePolicy1.setHorizontalStretch(1);
+        sizePolicy1.setVerticalStretch(0);
+        sizePolicy1.setHeightForWidth(pageWidget->sizePolicy().hasHeightForWidth());
+        pageWidget->setSizePolicy(sizePolicy1);
         pageProfile = new QWidget();
         pageProfile->setObjectName(QString::fromUtf8("pageProfile"));
         gridLayout_4 = new QGridLayout(pageProfile);
@@ -268,17 +298,13 @@ public:
 
         gridLayout_5->addWidget(line, 1, 0, 2, 5);
 
-        horizontalSpacer = new QSpacerItem(232, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
-
-        gridLayout_5->addItem(horizontalSpacer, 3, 0, 1, 2);
-
         resetButton = new QPushButton(SettingsDialog);
         resetButton->setObjectName(QString::fromUtf8("resetButton"));
         resetButton->setMaximumSize(QSize(31, 25));
         resetButton->setAutoFillBackground(false);
-        QIcon icon;
-        icon.addFile(QString::fromUtf8(":/images/undo.png"), QSize(), QIcon::Normal, QIcon::Off);
-        resetButton->setIcon(icon);
+        QIcon icon2;
+        icon2.addFile(QString::fromUtf8(":/images/undo.png"), QSize(), QIcon::Normal, QIcon::Off);
+        resetButton->setIcon(icon2);
         resetButton->setAutoDefault(false);
 
         gridLayout_5->addWidget(resetButton, 2, 2, 2, 1);
@@ -286,46 +312,20 @@ public:
         okButton = new QPushButton(SettingsDialog);
         okButton->setObjectName(QString::fromUtf8("okButton"));
         okButton->setMaximumSize(QSize(88, 16777215));
-        QIcon icon1;
-        icon1.addFile(QString::fromUtf8(":/images/dialog-ok.png"), QSize(), QIcon::Normal, QIcon::Off);
-        okButton->setIcon(icon1);
+        QIcon icon3;
+        icon3.addFile(QString::fromUtf8(":/images/dialog-ok.png"), QSize(), QIcon::Normal, QIcon::Off);
+        okButton->setIcon(icon3);
 
         gridLayout_5->addWidget(okButton, 2, 3, 2, 1);
 
         cancelButton = new QPushButton(SettingsDialog);
         cancelButton->setObjectName(QString::fromUtf8("cancelButton"));
         cancelButton->setMaximumSize(QSize(88, 16777215));
-        QIcon icon2;
-        icon2.addFile(QString::fromUtf8(":/images/dialog-cancel.png"), QSize(), QIcon::Normal, QIcon::Off);
-        cancelButton->setIcon(icon2);
+        QIcon icon4;
+        icon4.addFile(QString::fromUtf8(":/images/dialog-cancel.png"), QSize(), QIcon::Normal, QIcon::Off);
+        cancelButton->setIcon(icon4);
 
         gridLayout_5->addWidget(cancelButton, 2, 4, 2, 1);
-
-        menuList = new QListWidget(SettingsDialog);
-        QIcon icon3;
-        icon3.addFile(QString::fromUtf8(":/images/profile.png"), QSize(), QIcon::Normal, QIcon::Off);
-        QListWidgetItem *__qlistwidgetitem = new QListWidgetItem(menuList);
-        __qlistwidgetitem->setIcon(icon3);
-        QIcon icon4;
-        icon4.addFile(QString::fromUtf8(":/images/application-x-desktop.png"), QSize(), QIcon::Normal, QIcon::Off);
-        QListWidgetItem *__qlistwidgetitem1 = new QListWidgetItem(menuList);
-        __qlistwidgetitem1->setIcon(icon4);
-        menuList->setObjectName(QString::fromUtf8("menuList"));
-        QSizePolicy sizePolicy1(QSizePolicy::Preferred, QSizePolicy::Preferred);
-        sizePolicy1.setHorizontalStretch(0);
-        sizePolicy1.setVerticalStretch(0);
-        sizePolicy1.setHeightForWidth(menuList->sizePolicy().hasHeightForWidth());
-        menuList->setSizePolicy(sizePolicy1);
-        menuList->setMinimumSize(QSize(142, 0));
-        menuList->setMaximumSize(QSize(142, 16777215));
-        menuList->setFrameShape(QFrame::StyledPanel);
-        menuList->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
-        menuList->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
-        menuList->setEditTriggers(QAbstractItemView::NoEditTriggers);
-        menuList->setProperty("showDropIndicator", QVariant(true));
-        menuList->setIconSize(QSize(16, 16));
-
-        gridLayout_5->addWidget(menuList, 0, 0, 1, 1);
 
         QWidget::setTabOrder(menuList, loginLineEdit);
         QWidget::setTabOrder(loginLineEdit, passwordLineEdit);
@@ -354,15 +354,24 @@ public:
     void retranslateUi(QDialog *SettingsDialog)
     {
         SettingsDialog->setWindowTitle(QApplication::translate("SettingsDialog", "Preferences", 0, QApplication::UnicodeUTF8));
+
+        const bool __sortingEnabled = menuList->isSortingEnabled();
+        menuList->setSortingEnabled(false);
+        QListWidgetItem *___qlistwidgetitem = menuList->item(0);
+        ___qlistwidgetitem->setText(QApplication::translate("SettingsDialog", "Profiles", 0, QApplication::UnicodeUTF8));
+        QListWidgetItem *___qlistwidgetitem1 = menuList->item(1);
+        ___qlistwidgetitem1->setText(QApplication::translate("SettingsDialog", "Other", 0, QApplication::UnicodeUTF8));
+        menuList->setSortingEnabled(__sortingEnabled);
+
         groupBox->setTitle(QApplication::translate("SettingsDialog", "Tracker Account", 0, QApplication::UnicodeUTF8));
         loginLabel->setText(QApplication::translate("SettingsDialog", "Login:", 0, QApplication::UnicodeUTF8));
         passwordLabel->setText(QApplication::translate("SettingsDialog", "Password", 0, QApplication::UnicodeUTF8));
         registerLink->setText(QApplication::translate("SettingsDialog", "<a style='text-decoration:none; color:#1a4d82;' href=\"#\">Register</a>", 0, QApplication::UnicodeUTF8));
-        groupBoxKP->setTitle(QApplication::translate("SettingsDialog", "KINOPOISK.RU Account", 0, QApplication::UnicodeUTF8));
+        groupBoxKP->setTitle(QApplication::translate("SettingsDialog", "KINOPOISK.RU Account (not necessarily)", 0, QApplication::UnicodeUTF8));
         loginLabel_2->setText(QApplication::translate("SettingsDialog", "Login:", 0, QApplication::UnicodeUTF8));
         passwordLabel_2->setText(QApplication::translate("SettingsDialog", "Password", 0, QApplication::UnicodeUTF8));
         registerLinkKP->setText(QApplication::translate("SettingsDialog", "<a style='text-decoration:none; color:#1a4d82;' href=\"http://www.kinopoisk.ru/level/30/#new\">Register</a>", 0, QApplication::UnicodeUTF8));
-        groupBoxIMDB->setTitle(QApplication::translate("SettingsDialog", "Tracker Account", 0, QApplication::UnicodeUTF8));
+        groupBoxIMDB->setTitle(QApplication::translate("SettingsDialog", "IMDB.COM Account (not necessarily)", 0, QApplication::UnicodeUTF8));
         loginLabel_3->setText(QApplication::translate("SettingsDialog", "Email:", 0, QApplication::UnicodeUTF8));
         passwordLabel_3->setText(QApplication::translate("SettingsDialog", "Password", 0, QApplication::UnicodeUTF8));
         registerLinkIMDB->setText(QApplication::translate("SettingsDialog", "<a style='text-decoration:none; color:#1a4d82;' href=\"https://secure.imdb.com/register-imdb/?why=personalize\">Register</a>", 0, QApplication::UnicodeUTF8));
@@ -374,15 +383,6 @@ public:
         resetButton->setText(QString());
         okButton->setText(QApplication::translate("SettingsDialog", "OK", 0, QApplication::UnicodeUTF8));
         cancelButton->setText(QApplication::translate("SettingsDialog", "Cancel", 0, QApplication::UnicodeUTF8));
-
-        const bool __sortingEnabled = menuList->isSortingEnabled();
-        menuList->setSortingEnabled(false);
-        QListWidgetItem *___qlistwidgetitem = menuList->item(0);
-        ___qlistwidgetitem->setText(QApplication::translate("SettingsDialog", "Profiles", 0, QApplication::UnicodeUTF8));
-        QListWidgetItem *___qlistwidgetitem1 = menuList->item(1);
-        ___qlistwidgetitem1->setText(QApplication::translate("SettingsDialog", "Other", 0, QApplication::UnicodeUTF8));
-        menuList->setSortingEnabled(__sortingEnabled);
-
     } // retranslateUi
 
 };

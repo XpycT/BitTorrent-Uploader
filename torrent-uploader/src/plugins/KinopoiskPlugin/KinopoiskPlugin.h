@@ -18,8 +18,10 @@ public:
     virtual QStringList operations() const;
     virtual void     operation ();
     enum Status {Login,Category,Movie};
+
 signals:
     /*virtual*/ void getDescription(QString &descr);
+    /*virtual*/ void getStatus(int status);
 
 private slots:
     void replyFinished(QNetworkReply*);

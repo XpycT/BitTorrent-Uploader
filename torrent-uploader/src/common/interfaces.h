@@ -13,6 +13,8 @@ public:
     virtual void operation() = 0;
 
     virtual void getDescription(QString &descr)=0;
+
+    virtual void getStatus(int status)=0;
 };
 
 Q_DECLARE_INTERFACE(PluginInterface,

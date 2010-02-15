@@ -2,6 +2,7 @@ include(../3rdparty/qtsingleapplication/src/qtsingleapplication.pri)
 include(../3rdparty/qtcolorcombobox/src/qtcolorcombobox.pri)
 CONFIG += qt
 QT += network webkit
+#QT -= phonon xml
 DESTDIR = ../../bin
 
 DEPENDPATH += \
@@ -11,6 +12,9 @@ DEPENDPATH += \
 INCLUDEPATH += \
     . \
     ../common \
+
+win32:INCLUDEPATH += ../3rdparty/MediaInfo/Developers/Source
+
 
 CONFIG(debug, debug|release) {
     message(Build Debug!)

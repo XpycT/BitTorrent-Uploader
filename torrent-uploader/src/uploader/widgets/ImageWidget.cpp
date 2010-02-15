@@ -277,13 +277,16 @@ void ImageWidget::mousePressEvent(QMouseEvent *event)
         switch(currentMode){
         case Open:
         {
+          QSettings m_settings(QApplication::organizationName(), QApplication::applicationName());
+          QString lastDir=m_settings.value("LastImageDir", "").toString();
           QString fileName = QFileDialog::getOpenFileName(this,tr("Select Image"),
-                                       QApplication::applicationDirPath(),
+                                       lastDir,
                                        tr("Image Files (*.jpg *.jpeg *.png *.gif)"));
 
           if(fileName.isEmpty())
             return;
           else{
+             m_settings.setValue("LastImageDir", QFileInfo(fileName).absoluteDir().path());
              loadImage(fileName);
          }
         }

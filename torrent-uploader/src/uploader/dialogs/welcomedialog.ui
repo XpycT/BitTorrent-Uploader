@@ -104,7 +104,7 @@
       <item>
        <widget class="QGroupBox" name="groupBoxKP">
         <property name="title">
-         <string>KINOPOISK.RU</string>
+         <string>KINOPOISK.RU Account (not necessarily)</string>
         </property>
         <property name="checkable">
          <bool>true</bool>
@@ -147,7 +147,7 @@
       <item>
        <widget class="QGroupBox" name="groupBoxIMDB">
         <property name="title">
-         <string>IMDB.COM</string>
+         <string>IMDB.COM Account (not necessarily)</string>
         </property>
         <property name="checkable">
          <bool>true</bool>

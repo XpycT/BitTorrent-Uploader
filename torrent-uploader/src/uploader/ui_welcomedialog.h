@@ -1,8 +1,8 @@
 /********************************************************************************
 ** Form generated from reading UI file 'welcomedialog.ui'
 **
-** Created: Wed 2. Dec 09:00:36 2009
-**      by: Qt User Interface Compiler version 4.6.0
+** Created: Sun 14. Feb 21:30:57 2010
+**      by: Qt User Interface Compiler version 4.6.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -257,10 +257,10 @@ public:
         passwordLabel->setText(QApplication::translate("WelcomeDialog", "Password :", 0, QApplication::UnicodeUTF8));
         hideBox->setText(QApplication::translate("WelcomeDialog", "Don't show this window", 0, QApplication::UnicodeUTF8));
         okButton->setText(QApplication::translate("WelcomeDialog", "OK", 0, QApplication::UnicodeUTF8));
-        groupBoxKP->setTitle(QApplication::translate("WelcomeDialog", "KINOPOISK.RU", 0, QApplication::UnicodeUTF8));
+        groupBoxKP->setTitle(QApplication::translate("WelcomeDialog", "KINOPOISK.RU Account (not necessarily)", 0, QApplication::UnicodeUTF8));
         loginLabelKP->setText(QApplication::translate("WelcomeDialog", "Login: ", 0, QApplication::UnicodeUTF8));
         passwordLabelKP->setText(QApplication::translate("WelcomeDialog", "Password: ", 0, QApplication::UnicodeUTF8));
-        groupBoxIMDB->setTitle(QApplication::translate("WelcomeDialog", "IMDB.COM", 0, QApplication::UnicodeUTF8));
+        groupBoxIMDB->setTitle(QApplication::translate("WelcomeDialog", "IMDB.COM Account (not necessarily)", 0, QApplication::UnicodeUTF8));
         emailLabelIMDB->setText(QApplication::translate("WelcomeDialog", "Email:", 0, QApplication::UnicodeUTF8));
         passwordLabelIMDB->setText(QApplication::translate("WelcomeDialog", "Password:", 0, QApplication::UnicodeUTF8));
         label->setText(QApplication::translate("WelcomeDialog", "Tracker type:", 0, QApplication::UnicodeUTF8));

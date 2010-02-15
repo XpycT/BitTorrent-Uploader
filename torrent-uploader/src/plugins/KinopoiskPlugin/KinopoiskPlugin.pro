@@ -19,7 +19,7 @@ CONFIG(debug, debug|release) {
     OBJECTS_DIR = ../../../build/$${TARGET}/release/obj
 }
 
-DESTDIR = ../../../bin/plugins
+DESTDIR = ../../../bin/plugins/search
 
 SOURCES = KinopoiskPlugin.cpp \
     selectmoviedialog.cpp

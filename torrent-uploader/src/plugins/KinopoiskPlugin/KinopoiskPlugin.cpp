@@ -40,6 +40,7 @@ void KinopoiskPlugin::replyFinished(QNetworkReply* reply){
         case Category:{
                  switch(statusCode){
                      case 200:{
+                             emit getStatus(8); // Done
                              QString tmp=reply->readAll();
                              SelectMovieDialog dlg(0,tmp);
                              if(dlg.exec()){
@@ -67,6 +68,7 @@ void KinopoiskPlugin::replyFinished(QNetworkReply* reply){
 }
 void KinopoiskPlugin::searchMovie(const QString &name){
 
+    emit getStatus(1); //Connecting_kp
     QByteArray str=name.toLocal8Bit();
 
     QNetworkRequest request;
@@ -82,6 +84,7 @@ void KinopoiskPlugin::searchMovie(const QString &name){
     setStatus(Category);
 }
 void KinopoiskPlugin::getMovie(const QString &name){
+    emit getStatus(3); //Retrieving_kp
     QByteArray str=name.toLocal8Bit();
 
     QNetworkRequest request;
@@ -204,7 +207,7 @@ KinopoiskPlugin::KinopoiskPlugin()
 // ----------------------------------------------------------------------
 /*virtual*/ QStringList KinopoiskPlugin::operations() const
 {
-    return QStringList() << tr("Search movie...");
+    return QStringList() << tr("Search movie (kinopoisk.ru)...");
 }
 
 // ----------------------------------------------------------------------

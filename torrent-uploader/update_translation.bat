@@ -1,2 +1,2 @@
-lupdate TorrentUploader.pro
+lupdate.exe TorrentUploader.pro
 pause

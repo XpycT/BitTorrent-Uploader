@@ -13,7 +13,7 @@ class MainWindow : public QMainWindow, public Ui::MainWindow
     Q_OBJECT
 public:
     MainWindow();
-    enum ConnectMode {Connecting,Connecting_kp,Connecting_imdb,Connected,Disconnected,Uploading};
+    enum ConnectMode {Connecting,Connecting_kp,Connecting_imdb,Retrieving_kp,Retrieving_imdb,Connected,Disconnected,Uploading,Done};
     void loadPlugins();
     void addToMenu  (QObject* pobj);
 private slots:
@@ -28,9 +28,11 @@ private slots:
     void on_clearButton_clicked();
     void on_previewButton_clicked();
     void on_uploadButton_clicked();
+    void getMediaInfo();
 protected slots:
     void slotStringOperation();
     void getMovie(QString &descr);
+    void pluginStatus(int);
 private:
     void setConnectMode(ConnectMode Mode);
     bool askOnClose();

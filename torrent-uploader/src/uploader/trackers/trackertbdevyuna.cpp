@@ -16,7 +16,7 @@ void TrackerTBDevYuna::checkLogin(const QString &login,const QString &password){
     QString logininfo=QString("username=%1&password=%2")
                       .arg(login).arg(password);
     QNetworkRequest request;
-    request.setUrl(QUrl("http://"+url+"/tracker/takelogin.php"));
+    request.setUrl(QUrl("http://"+url+"/takelogin.php"));
     request.setRawHeader("Host",url.toLocal8Bit());
     request.setRawHeader("X-Powered-By",poweredBy.toLocal8Bit());
     request.setRawHeader("User-Agent", client.toLocal8Bit());
@@ -53,11 +53,11 @@ void TrackerTBDevYuna::uploadRelease(const QString &file,const QString &name
     "--"+boundary+"--";
 
     QNetworkRequest request;
-    request.setUrl(QUrl("http://"+url+"/tracker/takeupload.php"));
+    request.setUrl(QUrl("http://"+url+"/takeupload.php"));
     request.setRawHeader("Host",url.toLocal8Bit());
     request.setRawHeader("X-Powered-By",poweredBy.toLocal8Bit());
     request.setRawHeader("User-Agent", client.toLocal8Bit());
-    request.setRawHeader("Referer", "http://"+url.toLocal8Bit()+"/tracker/upload.php");
+    request.setRawHeader("Referer", "http://"+url.toLocal8Bit()+"/upload.php");
     request.setHeader(QNetworkRequest::ContentTypeHeader, "multipart/form-data; boundary="+boundary);
     request.setHeader(QNetworkRequest::ContentLengthHeader, bytesToSend.size());
 
@@ -94,7 +94,7 @@ QByteArray TrackerTBDevYuna::fileToSend(const QString &fieldName,const QString &
 void TrackerTBDevYuna::getCategory(){
     //qDebug() << "get TBDev Yuna Edition category";
     QNetworkRequest request;
-    request.setUrl(QUrl("http://"+url+"/tracker/upload.php"));
+    request.setUrl(QUrl("http://"+url+"/upload.php"));
     request.setRawHeader("Host",url.toLocal8Bit());
     request.setRawHeader("X-Powered-By",poweredBy.toLocal8Bit());
     request.setRawHeader("User-Agent", client.toLocal8Bit());
@@ -130,7 +130,7 @@ void TrackerTBDevYuna::downloadFile(const QString &id){
         dir.mkdir("torrent");
     dir.cd("torrent");
 
-   QUrl link=QUrl("http://"+url+"/tracker/download.php?id="+id+"&name="+tname);
+   QUrl link=QUrl("http://"+url+"/download.php?id="+id+"&name="+tname);
 
    torrentFile = new QFile(path+"/torrent/"+tname);
    if (!torrentFile->open(QIODevice::WriteOnly))

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0">
+<TS version="2.0" language="ru_RU">
 <context>
     <name>BBCodeWidget</name>
     <message>
@@ -155,58 +155,63 @@
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="../../src/uploader/dialogs/mainwindow.cpp" line="43"/>
+        <location filename="../../src/uploader/dialogs/mainwindow.cpp" line="44"/>
         <source>Error</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/uploader/dialogs/mainwindow.cpp" line="59"/>
+        <location filename="../../src/uploader/dialogs/mainwindow.cpp" line="60"/>
         <source>Select a .torrent file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/uploader/dialogs/mainwindow.cpp" line="60"/>
+        <location filename="../../src/uploader/dialogs/mainwindow.cpp" line="61"/>
         <source>Torrent File (*.torrent)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/uploader/dialogs/mainwindow.cpp" line="179"/>
+        <location filename="../../src/uploader/dialogs/mainwindow.cpp" line="180"/>
         <source>Connected to tracker &apos;%1&apos;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/uploader/dialogs/mainwindow.cpp" line="188"/>
+        <location filename="../../src/uploader/dialogs/mainwindow.cpp" line="189"/>
         <source>Retrieving data from &apos;%1&apos;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/uploader/dialogs/mainwindow.cpp" line="199"/>
+        <location filename="../../src/uploader/dialogs/mainwindow.cpp" line="200"/>
         <source>Connected successfully.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/uploader/dialogs/mainwindow.cpp" line="210"/>
+        <location filename="../../src/uploader/dialogs/mainwindow.cpp" line="211"/>
         <source>Connected unsuccessfully.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/uploader/dialogs/mainwindow.cpp" line="219"/>
+        <location filename="../../src/uploader/dialogs/mainwindow.cpp" line="220"/>
         <source>Uploading to tracker &apos;%1&apos;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/uploader/dialogs/mainwindow.cpp" line="235"/>
+        <location filename="../../src/uploader/dialogs/mainwindow.cpp" line="236"/>
         <source>Torrent Uploader</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/uploader/dialogs/mainwindow.cpp" line="236"/>
+        <location filename="../../src/uploader/dialogs/mainwindow.cpp" line="237"/>
         <source>Do you want to quit?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/uploader/dialogs/mainwindow.cpp" line="252"/>
+        <location filename="../../src/uploader/dialogs/mainwindow.cpp" line="253"/>
         <source>Not connected.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/uploader/dialogs/mainwindow.cpp" line="269"/>
+        <source>plugins directory does not exist</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -465,8 +470,8 @@
 <context>
     <name>SettingsDialog</name>
     <message>
-        <location filename="../../src/uploader/dialogs/settingsdialog.cpp" line="11"/>
         <location filename="../../src/uploader/dialogs/settingsdialog.ui" line="14"/>
+        <location filename="../../src/uploader/dialogs/settingsdialog.cpp" line="11"/>
         <source>Preferences</source>
         <translation type="unfinished"></translation>
     </message>
@@ -476,8 +481,8 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../../src/uploader/dialogs/settingsdialog.ui" line="290"/>
         <location filename="../../src/uploader/dialogs/settingsdialog.cpp" line="44"/>
-        <location filename="../../src/uploader/dialogs/settingsdialog.ui" line="229"/>
         <source>Select BitTorrent client</source>
         <translation type="unfinished"></translation>
     </message>
@@ -487,76 +492,76 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/uploader/dialogs/settingsdialog.ui" line="33"/>
-        <location filename="../../src/uploader/dialogs/settingsdialog.ui" line="159"/>
+        <location filename="../../src/uploader/dialogs/settingsdialog.ui" line="94"/>
+        <location filename="../../src/uploader/dialogs/settingsdialog.ui" line="220"/>
         <source>Tracker Account</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/uploader/dialogs/settingsdialog.ui" line="41"/>
-        <location filename="../../src/uploader/dialogs/settingsdialog.ui" line="107"/>
+        <location filename="../../src/uploader/dialogs/settingsdialog.ui" line="102"/>
+        <location filename="../../src/uploader/dialogs/settingsdialog.ui" line="168"/>
         <source>Login:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/uploader/dialogs/settingsdialog.ui" line="51"/>
-        <location filename="../../src/uploader/dialogs/settingsdialog.ui" line="117"/>
-        <location filename="../../src/uploader/dialogs/settingsdialog.ui" line="183"/>
+        <location filename="../../src/uploader/dialogs/settingsdialog.ui" line="112"/>
+        <location filename="../../src/uploader/dialogs/settingsdialog.ui" line="178"/>
+        <location filename="../../src/uploader/dialogs/settingsdialog.ui" line="244"/>
         <source>Password</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/uploader/dialogs/settingsdialog.ui" line="80"/>
+        <location filename="../../src/uploader/dialogs/settingsdialog.ui" line="141"/>
         <source>&lt;a style=&apos;text-decoration:none; color:#1a4d82;&apos; href=&quot;#&quot;&gt;Register&lt;/a&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/uploader/dialogs/settingsdialog.ui" line="93"/>
+        <location filename="../../src/uploader/dialogs/settingsdialog.ui" line="154"/>
         <source>KINOPOISK.RU Account</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/uploader/dialogs/settingsdialog.ui" line="146"/>
+        <location filename="../../src/uploader/dialogs/settingsdialog.ui" line="207"/>
         <source>&lt;a style=&apos;text-decoration:none; color:#1a4d82;&apos; href=&quot;http://www.kinopoisk.ru/level/30/#new&quot;&gt;Register&lt;/a&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/uploader/dialogs/settingsdialog.ui" line="173"/>
+        <location filename="../../src/uploader/dialogs/settingsdialog.ui" line="234"/>
         <source>Email:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/uploader/dialogs/settingsdialog.ui" line="212"/>
+        <location filename="../../src/uploader/dialogs/settingsdialog.ui" line="273"/>
         <source>&lt;a style=&apos;text-decoration:none; color:#1a4d82;&apos; href=&quot;https://secure.imdb.com/register-imdb/?why=personalize&quot;&gt;Register&lt;/a&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/uploader/dialogs/settingsdialog.ui" line="244"/>
+        <location filename="../../src/uploader/dialogs/settingsdialog.ui" line="305"/>
         <source>...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/uploader/dialogs/settingsdialog.ui" line="297"/>
+        <location filename="../../src/uploader/dialogs/settingsdialog.ui" line="358"/>
         <source>Reset all settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/uploader/dialogs/settingsdialog.ui" line="323"/>
+        <location filename="../../src/uploader/dialogs/settingsdialog.ui" line="384"/>
         <source>OK</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/uploader/dialogs/settingsdialog.ui" line="340"/>
+        <location filename="../../src/uploader/dialogs/settingsdialog.ui" line="401"/>
         <source>Cancel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/uploader/dialogs/settingsdialog.ui" line="391"/>
+        <location filename="../../src/uploader/dialogs/settingsdialog.ui" line="60"/>
         <source>Profiles</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/uploader/dialogs/settingsdialog.ui" line="400"/>
+        <location filename="../../src/uploader/dialogs/settingsdialog.ui" line="69"/>
         <source>Other</source>
         <translation type="unfinished"></translation>
     </message>
