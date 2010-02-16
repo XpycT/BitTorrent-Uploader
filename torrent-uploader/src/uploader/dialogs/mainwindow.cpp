@@ -5,6 +5,7 @@
 #include "dialogs/previewdialog.h"
 #include "trackers/trackertbdevyuna.h"
 
+#ifdef MEDIA_INFO
 #ifdef Q_WS_WIN
     #ifdef MEDIAINFO_LIBRARY
         #include "MediaInfo/MediaInfo.h" //Staticly-loaded library (.lib or .a or .so)
@@ -17,7 +18,7 @@
     #include <iomanip>
     using namespace MediaInfoNameSpace;    
 #endif
-
+#endif
 
 MainWindow::MainWindow()
 {
@@ -55,13 +56,13 @@ MainWindow::MainWindow()
     connect(actionAbout_Torrent_Uploader,SIGNAL(triggered()),this,SLOT(showAbout()));
     connect(action_Reconnect,SIGNAL(triggered()),this,SLOT(reconnect()));
 
-
+#ifdef MEDIA_INFO
     QAction* act = new QAction(this);
     act->setText(tr("Get Media Info..."));
     connect(act, SIGNAL(triggered()), this, SLOT(getMediaInfo()));
     menu_Tools->addSeparator();
     menu_Tools->addAction(act);
-
+#endif
 
 
 }
@@ -312,6 +313,7 @@ void MainWindow::createStatusBar()
   setStatusBar(statusBar);
 }
 
+#ifdef MEDIA_INFO
 void MainWindow::getMediaInfo()
 {
 // Обьявляем полностью все поддерживаемые форматы :)
@@ -403,7 +405,7 @@ formats.append(tr("Audio Visual Research (*.avr);;"));
 
     editor->appendPlainText(QString::fromStdWString(To_Display));
 }
-
+#endif
 
 // ----------------------------------------------------------------------
 void MainWindow::loadPlugins()

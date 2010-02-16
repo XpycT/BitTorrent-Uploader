@@ -28,7 +28,9 @@ private slots:
     void on_clearButton_clicked();
     void on_previewButton_clicked();
     void on_uploadButton_clicked();
+#ifdef MEDIA_INFO
     void getMediaInfo();
+#endif
 protected slots:
     void slotStringOperation();
     void getMovie(QString &descr);

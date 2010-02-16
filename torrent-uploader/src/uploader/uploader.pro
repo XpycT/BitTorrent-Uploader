@@ -1,4 +1,6 @@
 _RC_FILE = 1
+_MEDIA_INFO = 1
+
 include(../common/common.pri)
 TEMPLATE = app
 INCLUDEPATH += .
