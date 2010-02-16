@@ -13,7 +13,11 @@ INCLUDEPATH += \
     . \
     ../common \
 
-win32:INCLUDEPATH += ../3rdparty/MediaInfo/Developers/Source
+win32{
+    #Include your LIB path here
+    #INCLUDEPATH += ../3rdparty/MediaInfo/Developers/Source
+    INCLUDEPATH += ../../../3rdPartyLibs/MediaInfo/Developers/Source
+}
 
 
 CONFIG(debug, debug|release) {
