@@ -1,6 +1,6 @@
 #include <QtGui>
 #include "mainwindow.h"
-#include "dialogs/welcomedialog.h"
+
 #include "dialogs/settingsdialog.h"
 #include "dialogs/previewdialog.h"
 #include "trackers/trackertbdevyuna.h"
@@ -40,11 +40,7 @@ MainWindow::MainWindow()
     createStatusBar();
     readSettings();
 
-    if(!s_hide_welcome){
-        WelcomeDialog welcome;
-        if(welcome.exec()==QDialog::Accepted)
-            readSettings();
-    }
+
     switch(s_tracker_type){
         case 0:
         tracker=new TrackerTBDevYuna;        
