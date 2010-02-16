@@ -5,6 +5,10 @@
 #include "dialogs/previewdialog.h"
 #include "trackers/trackertbdevyuna.h"
 
+#ifdef CREATE_TORRENT
+    #include "dialogs/createtorrent.h"
+#endif
+
 #ifdef MEDIA_INFO
 #ifdef Q_WS_WIN
     #ifdef MEDIAINFO_LIBRARY
@@ -20,6 +24,7 @@
 #endif
 #endif
 
+// ----------------------------------------------------------------------
 MainWindow::MainWindow()
 {
     setupUi(this);
@@ -64,14 +69,18 @@ MainWindow::MainWindow()
     menu_Tools->addAction(act);
 #endif
 
-
+#ifndef CREATE_TORRENT
+    createTorrentButton->setVisible(false);
+#endif
 }
+// ----------------------------------------------------------------------
 void MainWindow::showError(QString &message){
     uploadButton->setEnabled(true);
     setConnectMode(Connected);
     QMessageBox::warning(this,tr("Error"),
                          message);    
 }
+// ----------------------------------------------------------------------
 void MainWindow::startDownload(QString &fileName){
     uploadButton->setEnabled(true);
     setConnectMode(Connected);
@@ -83,6 +92,7 @@ void MainWindow::startDownload(QString &fileName){
     }
 
 }
+// ----------------------------------------------------------------------
 void MainWindow::on_browseTorrentButton_clicked(){
     QString lastDir=m_settings->value("LastDir", "").toString();
     QString fileName=QFileDialog::getOpenFileName(this,tr("Select a .torrent file")
@@ -92,6 +102,7 @@ void MainWindow::on_browseTorrentButton_clicked(){
     lineEditTorrentFile->setText(fileName);
     m_settings->setValue("LastDir", QFileInfo(fileName).absoluteDir().path());
 }
+// ----------------------------------------------------------------------
 void MainWindow::on_previewButton_clicked(){
     QString name=lineEditTorrentName->text();
     QString category=comboBoxTorrentCategory->currentText();
@@ -110,12 +121,14 @@ void MainWindow::on_previewButton_clicked(){
     PreviewDialog preview(0,name,category,content,image_poster,screens);
     preview.exec();
 }
+// ----------------------------------------------------------------------
 void MainWindow::on_clearButton_clicked(){
     lineEditTorrentFile->clear();
     lineEditTorrentName->clear();
     comboBoxTorrentCategory->setCurrentIndex(0);
     editor->clear();
 }
+// ----------------------------------------------------------------------
 void MainWindow::on_uploadButton_clicked(){
     uploadButton->setEnabled(false);
     setConnectMode(Uploading);
@@ -144,6 +157,7 @@ void MainWindow::on_uploadButton_clicked(){
                            ,t_descr,t_cat
                            ,t_image_poster,t_screens);
 }
+// ----------------------------------------------------------------------
 void MainWindow::showPreferences(){
     SettingsDialog dlg(this);
     if(dlg.exec()){
@@ -151,24 +165,27 @@ void MainWindow::showPreferences(){
         tracker->checkLogin(s_login,s_password);
     }
 }
-
+// ----------------------------------------------------------------------
 void MainWindow::showAbout(){
    QMessageBox::about(this,QApplication::applicationName()
                       ,QString("<h3>%1 %2</h3>").arg(QApplication::applicationName())
                       .arg(QApplication::applicationVersion()));
 
 }
+// ----------------------------------------------------------------------
 void MainWindow::reconnect(){
     setConnectMode(Connecting);
     readSettings();
     tracker->checkLogin(s_login,s_password);
 }
+// ----------------------------------------------------------------------
 void MainWindow::blockInterface(bool &isBlocked){
    centralwidget->setEnabled(isBlocked);
    menu_Tools->setEnabled(isBlocked);
    if(!isBlocked)
        setConnectMode(Disconnected);
 }
+// ----------------------------------------------------------------------
 void MainWindow::getCategory(){
     comboBoxTorrentCategory->clear();
 
@@ -183,6 +200,7 @@ void MainWindow::getCategory(){
      }
      setConnectMode(Connected);
 }
+// ----------------------------------------------------------------------
 void  MainWindow::readSettings(){
     s_login         =m_settings->value("Profile/Login","").toString();
     s_password      =m_settings->value("Profile/Password","").toString();
@@ -199,6 +217,7 @@ void  MainWindow::readSettings(){
 
     s_tracker_type  =m_settings->value("General/TrackerType", 0).toInt();
 }
+// ----------------------------------------------------------------------
 void MainWindow::setConnectMode(ConnectMode Mode){
     currentConnectMode = Mode;
     switch(currentConnectMode){
@@ -274,6 +293,7 @@ void MainWindow::setConnectMode(ConnectMode Mode){
             break;
     }
 }
+// ----------------------------------------------------------------------
 void MainWindow::closeEvent(QCloseEvent *e)
 {
     if (askOnClose())
@@ -281,17 +301,19 @@ void MainWindow::closeEvent(QCloseEvent *e)
     else
         e->ignore();
 }
+// ----------------------------------------------------------------------
 bool MainWindow::askOnClose()
 {
     QMessageBox::StandardButton ret;
     ret = QMessageBox::question(this, tr("Torrent Uploader"),
-                               tr("Do you want to quit?"),
-                               QMessageBox::Ok
-                               | QMessageBox::Cancel);
-    if (ret == QMessageBox::Cancel)
+                               tr("Are you sure you want to quit?"),
+                               QMessageBox::Yes
+                               | QMessageBox::No);
+    if (ret == QMessageBox::No)
         return false;
     return true;
 }
+// ----------------------------------------------------------------------
 void MainWindow::createStatusBar()
 {
   connectLabel = new QLabel;
@@ -312,7 +334,7 @@ void MainWindow::createStatusBar()
   statusBar->setStyleSheet("QStatusBar::item { border-width: 0; }");
   setStatusBar(statusBar);
 }
-
+// ----------------------------------------------------------------------
 #ifdef MEDIA_INFO
 void MainWindow::getMediaInfo()
 {
@@ -466,3 +488,15 @@ void MainWindow::getMovie(QString &descr)
 void MainWindow::pluginStatus(int status){
    setConnectMode((ConnectMode)status);
 }
+// ----------------------------------------------------------------------
+#ifdef CREATE_TORRENT
+void MainWindow::on_createTorrentButton_clicked()
+{
+    createtorrent *ct=new createtorrent(this);
+    connect(ct, SIGNAL(torrent_to_upload(QString)), this, SLOT(setTorrent(QString)));
+}
+// ----------------------------------------------------------------------
+void MainWindow::setTorrent(QString torrentPath){
+    lineEditTorrentFile->setText(torrentPath);
+}
+#endif

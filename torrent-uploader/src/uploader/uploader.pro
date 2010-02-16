@@ -1,6 +1,6 @@
 _RC_FILE = 1
 _MEDIA_INFO = 1
-
+_CREATE_TORRENT = 1
 include(../common/common.pri)
 TEMPLATE = app
 INCLUDEPATH += .
@@ -12,6 +12,7 @@ SOURCES += main.cpp \
     dialogs/mainwindow.cpp \
     dialogs/previewdialog.cpp \
     trackers/trackertbdevyuna.cpp
+
 HEADERS += version.h \
     dialogs/welcomedialog.h \
     dialogs/settingsdialog.h \
@@ -22,6 +23,14 @@ HEADERS += version.h \
     trackers/trackertbdevyuna.h \
     trackers/trackerrequest.h \
     ../common/interfaces.h
+
 FORMS += dialogs/welcomedialog.ui \
     dialogs/settingsdialog.ui \
     dialogs/mainwindow.ui
+
+
+contains(_CREATE_TORRENT, 1 ) {
+    SOURCES += dialogs/createtorrent.cpp
+    HEADERS += dialogs/createtorrent.h
+    FORMS += dialogs/createTorrentDialog.ui
+}

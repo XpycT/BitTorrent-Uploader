@@ -15,8 +15,23 @@ INCLUDEPATH += \
 
 contains(_MEDIA_INFO, 1 ) {
     DEFINES += MEDIA_INFO
+    # Change path to your library folder
     INCLUDEPATH += ../../../3rdPartyLibs/MediaInfo/Developers/Source
 }
+contains(_CREATE_TORRENT, 1 ) {
+    CONFIG += static
+    DEFINES += CREATE_TORRENT
+win32:INCLUDEPATH += . \
+        ../../../3rdPartyLibs/libtorrent/include \
+        ../../../3rdPartyLibs/libtorrent/zlib \
+        ../../../../boost_1_42_0
+win32:LIBS += -L"D:\SVN\3rdPartyLibs\libtorrent\bin\gcc-mingw-4.4.0\release\boost-source\character-set-ansi\dht-support-off\link-static\runtime-link-static\threading-multi" \
+    -L"D:\boost_1_42_0\bin.v2\libs\system\build\gcc-mingw-4.4.0\release\boost-source\character-set-ansi\dht-support-off\link-static\threading-multi" \
+    -L"D:\boost_1_42_0\bin.v2\libs\filesystem\build\gcc-mingw-4.4.0\release\link-static" \
+    -llibtorrent -llibboost_system-mgw44-mt-1_42 -lws2_32 -llibboost_filesystem-mgw44-1_42
+}
+
+
 
 CONFIG(debug, debug|release) {
     message(Build Debug!)

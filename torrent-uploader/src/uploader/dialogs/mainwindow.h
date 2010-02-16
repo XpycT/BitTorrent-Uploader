@@ -16,7 +16,7 @@ public:
     enum ConnectMode {Connecting,Connecting_kp,Connecting_imdb,Retrieving_kp,Retrieving_imdb,Connected,Disconnected,Uploading,Done};
     void loadPlugins();
     void addToMenu  (QObject* pobj);
-private slots:
+private slots:    
     void showPreferences();
     void showAbout();
     void reconnect();
@@ -28,6 +28,10 @@ private slots:
     void on_clearButton_clicked();
     void on_previewButton_clicked();
     void on_uploadButton_clicked();
+#ifdef CREATE_TORRENT
+    void on_createTorrentButton_clicked();
+    void setTorrent(QString);
+#endif
 #ifdef MEDIA_INFO
     void getMediaInfo();
 #endif
