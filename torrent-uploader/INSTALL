@@ -1,0 +1,5 @@
+[Requirements]
+  - Qt 4.5.x or highter
+  - boost 1.42.0
+  - libtorrent-rasterbar 0.14.8
+  - mediainfo 0.7.27
