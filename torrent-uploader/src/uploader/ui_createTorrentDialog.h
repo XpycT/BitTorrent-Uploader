@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'createTorrentDialog.ui'
 **
-** Created: Tue 16. Feb 16:43:38 2010
+** Created: Wed 17. Feb 12:33:00 2010
 **      by: Qt User Interface Compiler version 4.6.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!

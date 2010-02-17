@@ -21,7 +21,7 @@ VS_VERSION_INFO VERSIONINFO
       BLOCK "000004b0"
       BEGIN
         VALUE "CompanyName",      UPLOADER_ORGANIZATION
-        VALUE "FileDescription",  "BitTorrent Uploader"
+        VALUE "FileDescription",  "BitTorrent Uploader - cross-platform client for torrent-tracker"
         VALUE "FileVersion",      UPLOADER_VERSION
         VALUE "LegalCopyright",   UPLOADER_COPYRIGHT
         VALUE "OriginalFilename", "uploader.exe"
