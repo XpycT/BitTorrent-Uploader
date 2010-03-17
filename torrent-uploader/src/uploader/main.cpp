@@ -6,8 +6,8 @@
 #include "dialogs/welcomedialog.h"
 int main(int argc, char **argv)
 {
-  QTextCodec::setCodecForTr(QTextCodec::codecForName("WINDOWS-1251"));
-  QTextCodec::setCodecForCStrings(QTextCodec::codecForName("WINDOWS-1251"));
+  QTextCodec::setCodecForTr(QTextCodec::codecForName("WINDOWS-1251")); //WINDOWS-1251
+  QTextCodec::setCodecForCStrings(QTextCodec::codecForName("WINDOWS-1251")); //WINDOWS-1251
 
     QtSingleApplication instance(argc, argv);
     if (instance.sendMessage("Wake up!"))
