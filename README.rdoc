@@ -12,6 +12,9 @@ BitTorrent Uploader - is a cross-platform client for torrent-tracker with the po
 
 BitTorrent Uploader — это кроссплатформенный клиент для торрент-трекеров с возможностью оформления релизов, их предпросмотра, поиска информации на сайтах kinopoisk.ru и imdb.com, с открытыми исходными кодами, написанный на Qt/C++. 
 
+=== Demo
+See it in action[http://rutube.ru/tracks/2946633.html?v=b7f76ab428cef2f39f50fbf7d520b498]
+
 == Requirements
 
 * Qt 4.5.x or highter
