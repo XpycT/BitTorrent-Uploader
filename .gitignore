@@ -1,0 +1,6 @@
+bin
+build
+tools
+*.user
+Makefile
+*~
